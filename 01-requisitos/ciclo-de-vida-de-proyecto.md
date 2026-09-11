@@ -55,7 +55,7 @@ Etapa 0: Fundación ➔ Etapa 1: Arquitectura ➔ Etapa 2: Construcción ➔ Eta
 ### Etapa 3: Hardening, Auditoría y Seguridad
 - **Objetivo:** Verificar exhaustivamente la resiliencia, seguridad y calidad antes de abrir a usuarios reales.
 - **Entregables:**
-  - Auditoría de seguridad y políticas de privacidad en `05-seguridad/`.
+  - Auditoría de seguridad y políticas de privacidad (en `08-legal-y-confianza/` y `11-auditorias/`; ver ADR-005).
   - Informe de auditoría formal en `11-auditorias/auditoria-[hito].md`.
   - Manuales operativos y de incidentes en `12-runbooks/`.
   - Validación de backups, pausas y procedimientos de recuperación.

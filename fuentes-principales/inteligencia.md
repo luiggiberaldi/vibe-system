@@ -5,10 +5,10 @@
 > **Fuente de verdad:** No; resume y enlaza a las fuentes de autoridad  
 > **Responsable:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 1.0.0  
+> **Versión:** 1.1.0  
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
-> **Próxima revisión:** al consolidar la primera versión estable v1.0.0  
+> **Próxima revisión:** al iniciar H1  
 
 ---
 
@@ -64,7 +64,8 @@ Un ecosistema metodológico autocontenido donde:
 
 | Elemento | Estado actual | Observación |
 |---|---|---|
-| Fase de trabajo | Vibe System v1.0.0 OFICIAL | H0 Cerrado / H1 Habilitado |
+| Fase de trabajo | Vibe System v1.1.0 OFICIAL | H0 Cerrado / AUD-VS-001 remediada / H1 Habilitado |
+| Repositorio Git | Inicializado con remote `origin` | `https://github.com/luiggiberaldi/vibe-system` |
 | Módulo de control | Completo (`00-control/`) | Convenciones, DoR, DoD, Estados, Glosario, Checklists |
 | Módulo de requisitos | En redacción (`01-requisitos/`) | Flujo de ejecución, Parámetros, Actualización, Visión |
 | Módulo de arquitectura | En redacción (`03-arquitectura/`) | Arquitectura documental y flujo de datos |
@@ -74,7 +75,7 @@ Un ecosistema metodológico autocontenido donde:
 ### Límites críticos
 
 - Vibe System define **CÓMO trabajar**; no contiene lógica, reglas ni dependencias de productos específicos.
-- Ningún archivo operativo debe superar ~600 líneas de longitud.
+- Los documentos normativos no superan ~600 líneas; los registros append-only se rotan a anexos (ADR-004).
 - Las decisiones críticas y validaciones de negocio deben ser deterministas.
 - Luigi es la única autoridad humana con poder de aprobación para cambios de alcance o arquitectura.
 
@@ -104,6 +105,8 @@ Un ecosistema metodológico autocontenido donde:
 | Guía de Arranque Rápido | `07-operacion/guia-de-arranque-de-nuevo-proyecto.md` | ACTIVO | Procedimiento paso a paso para nuevo proyecto en 5 min |
 | Registro de Riesgos | `09-riesgos/registro-riesgos-vibe-system.md` | ACTIVO | Matriz de riesgos metodológicos y mitigaciones |
 | Auditoría Cierre H0 | `11-auditorias/auditoria-H0-fundacion-vibe-system.md` | APROBADA | Certificación formal de la base documental v1.0.0 |
+| Auditoría de coherencia | `11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md` | REMEDIADA | Hallazgos AUD-001 a AUD-008 cerrados por el plan de fixeo |
+| Plan de fixeo documental | `00-control/plan-de-fixeo-documental.md` | COMPLETADO | Fases 0 a 4 (T-DOC-001 a T-DOC-018) |
 | Release Notes v1.0.0 | `14-entregas/RELEASE-NOTES-v1.0.0.md` | OFICIAL | Acta de lanzamiento oficial del framework |
 | Memoria curada | `fuentes-principales/inteligencia.md` | ACTIVO | Este documento; estado activo condensado |
 | Historial de sesiones | `fuentes-principales/bitacora.md` | ACTIVO | Diario de bitácora cronológico de sesiones |
@@ -119,8 +122,10 @@ Un ecosistema metodológico autocontenido donde:
 | F-003 | HECHO_VERIFICADO | Todo el material específico de proyectos de aplicación externos fue extraído y preservado íntegramente en `carpetas externas de proyecto/` | Carpeta `carpetas externas de proyecto/` | 2026-09-11 | Alta | CERRADO |
 | F-004 | HECHO_VERIFICADO | La tríada de memoria viva (`agent.md`, `inteligencia.md`, `bitacora.md`) rige el contexto de trabajo con IA | `fuentes-principales/` | 2026-09-11 | Alta | ACTIVO |
 | F-005 | HECHO_VERIFICADO | Se establecen plantillas formales para ADRs, Tests, Auditorías, Runbooks y Cambios de Alcance | Carpetas `02`, `10`, `11`, `12` | 2026-09-11 | Alta | ACTIVO |
-| F-006 | HECHO_VERIFICADO | La limitación de archivos a ~600 líneas previene la degradación de atención en agentes LLM | Métrica operativa | 2026-09-11 | Alta | ACTIVO |
+| F-006 | HECHO_VERIFICADO | El techo de ~600 líneas en documentos normativos previene la degradación de atención en agentes LLM (regla escalonada completa en ADR-004) | Métrica operativa | 2026-09-11 | Alta | ACTIVO |
 | F-007 | HECHO_VERIFICADO | Vibe System v1.0.0 cuenta con auditoría formal de cierre H0 aprobada sin reservas | `auditoria-H0-fundacion-vibe-system.md` | 2026-09-11 | Alta | CERRADO |
+| F-008 | HECHO_VERIFICADO | Los 8 hallazgos de AUD-VS-001 fueron remediados por el plan de fixeo y verificados por AUD-VS-002 | `AUD-VS-002` y commits Git | 2026-09-11 | Alta | ACTIVO |
+| F-009 | HECHO_VERIFICADO | El sistema cuenta con repositorio Git local y remote `origin` en GitHub | `https://github.com/luiggiberaldi/vibe-system` | 2026-09-11 | Alta | ACTIVO |
 
 ---
 
@@ -130,7 +135,7 @@ Un ecosistema metodológico autocontenido donde:
 |---|---|---|---|---|---|---|
 | D-001 | DECISIÓN | Markdown versionado como formato primario universal | Portabilidad, legibilidad humana y compatibilidad nativa con LLMs | Core | 2026-09-10 | ACTIVA |
 | D-002 | DECISIÓN | Tríada obligatoria de memoria en `fuentes-principales/` | Mantener contexto claro, reglas firmes e historial sin desbordamiento | Core | 2026-09-10 | ACTIVA |
-| D-003 | DECISIÓN | Límite orientativo estricto de ~600 líneas por documento operativo | Preservar ventana de contexto útil de la IA y facilitar revisión | Core | 2026-09-10 | ACTIVA |
+| D-003 | DECISIÓN | Límite escalonado de líneas: ~600 para normativos, rotación para registros (ver ADR-004) | Preservar ventana de contexto útil de la IA | Core + ADR-004 | 2026-09-11 | ACTIVA |
 | D-004 | DECISIÓN | DoR obligatorio antes de escribir código | Evitar retrabajo, alucinaciones y código sin requisitos claros | `00-control/` | 2026-09-11 | ACTIVA |
 | D-005 | DECISIÓN | DoD obligatorio antes de dar por cerrada cualquier tarea | Garantizar calidad verificada con pruebas y documentación actualizada | `00-control/` | 2026-09-11 | ACTIVA |
 | D-006 | DECISIÓN | Separación estricta entre framework (`sistema de proyectos`) y proyectos de aplicación | Evitar acoplamiento y contaminación de reglas específicas | Core | 2026-09-11 | ACTIVA |
@@ -141,12 +146,14 @@ Un ecosistema metodológico autocontenido donde:
 | ADR-001 | ADR | Arquitectura documental en Markdown versionado en Git | Soberanía, lectura local instantánea por IAs y sincronización atómica con código | `02-decisiones/` | 2026-09-11 | ACEPTADA |
 | ADR-002 | ADR | Tríada de memoria viva y principio de autoridad humana | Erradicar amnesia y autonomía destructiva | `02-decisiones/` | 2026-09-11 | ACEPTADA |
 | ADR-003 | ADR | Techo cuantitativo de ~600 líneas por archivo | Evitar efecto Lost in the Middle y degradación de atención en LLMs | `02-decisiones/` | 2026-09-11 | ACEPTADA |
+| ADR-004 | ADR | Límites escalonados por clase de documento (normativo / registro / referencia) | Hacer la regla PAR-01 cumplible y verificable sin truncar historia | `02-decisiones/` | 2026-09-11 | ACEPTADA |
+| ADR-005 | ADR | Topología canónica: `05-ux/` y 16 carpetas | Unificar la topología contradictoria detectada por AUD-VS-001 | `02-decisiones/` | 2026-09-11 | ACEPTADA |
 
 ---
 
 ## 5. Parámetros del sistema (Resumen)
 
-- **Límite de líneas:** Máximo ~600 líneas por archivo de código o especificación.
+- **Límite de líneas:** escalonado por clase según ADR-004 (normativos ~600; registros con rotación a anexos; referencias divididas por dominios).
 - **Formato de fechas:** Estándar ISO `YYYY-MM-DD`.
 - **Estructura de carpetas:** Nomenclatura numérica de dos dígitos (`00-control` a `14-entregas`) más `fuentes-principales`.
 - **Sintaxis de identificadores:**
@@ -157,6 +164,7 @@ Un ecosistema metodológico autocontenido donde:
   - Decisiones: `D-[nnn]`
   - Hechos: `F-[nnn]`
   - Reglas base: `RB-[nnn]`
+  - Riesgos: `RSK-[nnn]`
   - Runbooks: `RBK-[nnn]-[procedimiento].md`
 
 ---
@@ -166,3 +174,4 @@ Un ecosistema metodológico autocontenido donde:
 | Versión | Fecha | Cambio | Responsable |
 |---|---|---|---|
 | 1.0.0 | 2026-09-11 | Reescritura completa de inteligencia para Vibe System Core tras desacoplamiento de un proyecto de aplicación externo | Luigi / Antigravity |
+| 1.1.0 | 2026-09-11 | Sincronización post-fixeo: estado v1.1.0, ADR-004/005, hechos F-008/F-009, D-003 escalonada, repositorio GitHub | Buffy (agente IA) |

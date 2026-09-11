@@ -42,7 +42,7 @@ Al crear un nuevo proyecto (cliente, personal o producto), se copia la siguiente
 │   └── ADR-000-template.md               (Plantilla de decisiones arquitectónicas)
 ├── 03-arquitectura/                       (Planos técnicos del producto)
 ├── 04-ia/                                 (Prompts y adaptadores si aplican)
-├── 05-seguridad/                          (Políticas y control de datos)
+├── 05-ux/                                 (Flujos, interacción y diseño de pantallas)
 ├── 06-calidad/                            (Matrices de validación)
 ├── 07-operacion/                          (Scripts y configuración)
 ├── 08-legal-y-confianza/                  (Términos y privacidad)

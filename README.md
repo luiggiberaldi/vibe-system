@@ -3,7 +3,7 @@
 > **Estado:** ACTIVO / BASE DEL SISTEMA  
 > **Propósito:** Definir los parámetros, reglas, flujo de ejecución y ciclo de actualización para construir cualquier producto digital asistido por IA con control total.  
 > **Autor y Responsable:** Luigi  
-> **Versión:** 1.0.0  
+> **Versión:** 1.1.0  
 > **Última actualización:** 2026-09-11  
 
 ---
@@ -66,7 +66,7 @@ Cualquier proyecto construido bajo Vibe System sigue un ciclo de vida predecible
 
 1. **Determinismo sobre generación:** La IA genera texto, código y bocetos; la lógica de negocio, validaciones de seguridad, estados y finanzas viven en código determinista fuera del modelo.
 2. **Desacoplamiento de la memoria:** El contexto del proyecto no reside en la ventana de chat del modelo (que se reinicia o satura); reside en archivos Markdown persistentes versionados.
-3. **Límite de tamaño documental:** Ningún documento operativo debe sobrepasar las 600 líneas. Si crece más, se divide en submódulos para no saturar el contexto de la IA.
+3. **Límite de tamaño documental (escalonado, ADR-004):** Los documentos normativos (leídos completos por la IA) no superan las 600 líneas; los registros append-only (bitácora, changelogs) crecen sin techo y rotan entradas antiguas a anexos; las referencias se dividen por dominios.
 4. **Una fuente por concepto:** Cero documentos duplicados con el mismo propósito. Cada archivo tiene un dueño y una responsabilidad única.
 5. **IDs permanentes e inmutables:** Los identificadores de decisiones (`D-###`, `ADR-###`), riesgos (`R-###`), criterios (`CA-###`) y tareas no se reciclan.
 6. **Invariantes no negociables:** Todo proyecto tiene reglas inviolables (ej. "cero secretos en código", "respaldo antes de migrar", "pruebas antes de deploy").
@@ -134,11 +134,15 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 | **ADR-001 Docs en Markdown** | [`02-decisiones/ADR-001-arquitectura-documental-markdown.md`](02-decisiones/ADR-001-arquitectura-documental-markdown.md) | Justificación de Markdown en Git frente a herramientas SaaS |
 | **ADR-002 Memoria y Autoridad** | [`02-decisiones/ADR-002-triada-de-memoria-y-autoridad-humana.md`](02-decisiones/ADR-002-triada-de-memoria-y-autoridad-humana.md) | Justificación de la tríada de memoria viva y control humano |
 | **ADR-003 Techo de 600 Líneas** | [`02-decisiones/ADR-003-techo-600-lineas-anti-lost-in-middle.md`](02-decisiones/ADR-003-techo-600-lineas-anti-lost-in-middle.md) | Justificación cuantitativa para mitigar pérdida de atención en LLMs |
+| **ADR-004 Límites Escalonados** | [`02-decisiones/ADR-004-limites-escalonados-de-archivo.md`](02-decisiones/ADR-004-limites-escalonados-de-archivo.md) | Evolución de PAR-01: normativos, registros append-only y referencias |
+| **ADR-005 Topología `05-ux/`** | [`02-decisiones/ADR-005-topologia-carpeta-05-ux.md`](02-decisiones/ADR-005-topologia-carpeta-05-ux.md) | Carpeta canónica del prefijo 05 y conteo oficial de 16 carpetas |
 | **System Prompt Maestro** | [`04-ia/system-prompt-vibe-coder.md`](04-ia/system-prompt-vibe-coder.md) | Prompt de sistema reutilizable para Cursor, Claude, Antigravity |
 | **Protocolo Anti-Alucinaciones** | [`04-ia/protocolo-anti-alucinaciones.md`](04-ia/protocolo-anti-alucinaciones.md) | Disciplina de verificación determinista para agentes de IA |
 | **Guía de Arranque Rápido** | [`07-operacion/guia-de-arranque-de-nuevo-proyecto.md`](07-operacion/guia-de-arranque-de-nuevo-proyecto.md) | Procedimiento paso a paso para nuevo proyecto en 5 min |
 | **Registro de Riesgos** | [`09-riesgos/registro-riesgos-vibe-system.md`](09-riesgos/registro-riesgos-vibe-system.md) | Matriz de riesgos metodológicos y mitigaciones |
 | **Auditoría Cierre H0** | [`11-auditorias/auditoria-H0-fundacion-vibe-system.md`](11-auditorias/auditoria-H0-fundacion-vibe-system.md) | Certificación formal de la base documental v1.0.0 |
+| **Auditoría de Coherencia** | [`11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md`](11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md) | Auditoría crítica de v1.0.0; base del plan de fixeo |
+| **Re-Certificación v1.1.0** | [`11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md`](11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md) | Verificación reproducible del cierre de hallazgos y dictamen APROBADA |
 | **Release Notes v1.0.0** | [`14-entregas/RELEASE-NOTES-v1.0.0.md`](14-entregas/RELEASE-NOTES-v1.0.0.md) | Acta de lanzamiento oficial de Vibe System |
 | **Reglas de Trabajo para IA** | [`fuentes-principales/agent.md`](fuentes-principales/agent.md) | Protocolo y límites de autoridad para asistentes de IA |
 | **Memoria del Sistema** | [`fuentes-principales/inteligencia.md`](fuentes-principales/inteligencia.md) | Contexto curado, decisiones y hechos verificados |

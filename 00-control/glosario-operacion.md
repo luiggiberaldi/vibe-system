@@ -250,7 +250,7 @@
 
 **No significa:** el único documento que menciona un tema ni una conversación aislada.
 
-**Ejemplo:** `planmaestro.md` controla alcance y fases; `arquitectura.md` controla diseño técnico; código/tests controlan comportamiento implementado.
+**Ejemplo:** el plan maestro controla el alcance y las fases; el plano de arquitectura controla el diseño técnico; código/tests controlan comportamiento implementado.
 
 **Relacionado con:** convenciones, inteligencia.
 
@@ -288,7 +288,7 @@
 
 **No significa:** lista detallada de cada línea de código o sustituto del roadmap ejecutable.
 
-**Relacionado con:** `planmaestro.md` a .
+**Relacionado con:** el plan maestro y el roadmap del proyecto.
 
 **Estado:** por consolidar en H0.
 
@@ -430,7 +430,7 @@
 
 **Ejemplo:** `RB-006 → D-009 → estado FALLIDO_RECUPERABLE → T-IA-003 → M-IA-002 → RUN-IA-001`.
 
-**Relacionado con:** `00-control/matriz-trazabilidad.md`.
+**Relacionado con:** la matriz de trazabilidad del proyecto (si existe).
 
 **Estado:** pendiente de creación.
 
@@ -583,7 +583,7 @@ Este documento se considera activo cuando:
 
 ### Próximo documento
 
-`matriz-trazabilidad.md` — conectar requisitos críticos, decisiones, arquitectura, implementación futura, pruebas, métricas, alertas y runbooks.
+la matriz de trazabilidad — conectar requisitos críticos, decisiones, arquitectura, implementación futura, pruebas, métricas, alertas y runbooks.
 
 ---
 

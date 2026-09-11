@@ -61,16 +61,51 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 | Elemento | Estado al 2026-09-11 |
 |---|---|
 | Sistema | Vibe System — Meta-Framework y Sistema Operativo Documental |
-| Hito actual | H0 — Cimentación de Especificaciones Maestras |
+| Fase actual | v1.1.0: remediación de AUD-VS-001 completada; H1 habilitado |
+| Repositorio | Git local con remote `origin` (push inicial y tag v1.1.0 pendientes de confirmación de Luigi) |
 | Desacoplamiento de proyectos | Completado (un proyecto de aplicación externo extraído y preservado) |
-| Fuentes de control | Activas (`convenciones.md`, `DoR`, `DoD`, `estados`, `glosario`, `pre-commit`) |
+| Fuentes de control | Activas (`convenciones.md`, `DoR`, `DoD`, `estados`, `glosario` modular, `pre-commit`) |
 | Fuentes principales | Activas (`agent.md`, `inteligencia.md`, `bitacora.md`) |
-| Especificaciones maestras | En proceso de redacción (`01-requisitos/`, `03-arquitectura/`) |
-| Próxima entrega | Publicación de especificaciones de Flujo, Parámetros y Actualización |
+| Próxima entrega | Push + tag v1.1.0; inicio de H1 (incluye DT-001: reorganizar normativos sobre el techo) |
 
 ---
 
 ## 3. Entradas cronológicas
+
+## 2026-09-11 — Fixeo documental completo: AUD-VS-001 → v1.1.0 (Fases 0–4)
+
+- Estado de sesión: CERRADA (pendiente confirmación humana de push y tag)
+- Hito/epic: Core — Plan de fixeo documental (T-DOC-001 a T-DOC-018)
+- Responsable: Luigi
+- Objetivo: Cerrar los 8 hallazgos de AUD-VS-001 y preparar la publicación en GitHub.
+
+### Hecho
+- Fase 0: repositorio Git inicializado (`.gitignore`, `.gitattributes` LF), commit base `a443929`, remote `origin` configurado.
+- Fase 1: ADR-004 (límites escalonados) y ADR-005 (`05-ux/`, 16 carpetas) aceptadas; PAR-01, PAR-02 y PAR-04 sincronizados; prefijo `RSK-` unificado.
+- Fase 2: 40 enlaces `file:///` → rutas relativas; referencias colgantes generalizadas en 12 archivos; auditoría H0 normalizada como AUD-VS-000.
+- Fase 3: glosario purgado de vocabulario de juego y dividido en índice + 3 módulos; `agent.md` v1.1.0; `bitacora-anexos/` con regla de rotación.
+- Fase 4: `inteligencia.md` sincronizada; RSK-007 y RSK-008 registradas; RELEASE-NOTES v1.1.0; AUD-VS-002 dictamen APROBADA con evidencia reproducible.
+
+### Decisiones
+- ADR-004: regla de 600 líneas reescrita escalonada por clase de documento (decisión de Luigi, Q-002).
+- ADR-005: `05-ux/` canónica y topología de 16 carpetas.
+
+### Riesgos, errores o bloqueos
+- DT-001 aceptada: normativos sobre el techo (`convenciones.md`, `estados-del-trabajo.md`, DoR, DoD) se reorganizarán en H1.
+- Push y tag requieren confirmación explícita de Luigi (agent.md).
+
+### Documentos creados o actualizados
+- `02-decisiones/ADR-004-limites-escalonados-de-archivo.md` y `ADR-005-topologia-carpeta-05-ux.md` — nuevos.
+- `00-control/glosario.md` (índice) + `glosario-metodologia.md`, `glosario-ia-seguridad.md`, `glosario-operacion.md` — partición y purga.
+- `01-requisitos/parametros-del-sistema.md`, `README.md`, `00-control/convenciones.md`, plantillas, DoR/DoD — sincronización y enlaces.
+- `09-riesgos/registro-riesgos-vibe-system.md`, `fuentes-principales/inteligencia.md`, `fuentes-principales/agent.md` — memoria y riesgos.
+- `14-entregas/RELEASE-NOTES-v1.1.0.md`, `11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md` — release y re-certificación.
+
+### Evidencia
+- Evidencia reproducible (E1–E10) en `11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md` §3; commits `a443929`, `cea8fcf`, `ac5d964`.
+
+### Siguiente paso
+- Confirmar con Luigi el push inicial y el tag `v1.1.0`; luego iniciar H1 con la reorganización de DT-001.
 
 ## 2026-09-11 — Consolidación y Certificación de Vibe System v1.0.0 (Cierre de H0)
 
