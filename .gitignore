@@ -1,0 +1,8 @@
+# Vibe System — control de versiones
+# Contexto local de agentes IA (no pertenece al repositorio)
+.freebuff/
+
+# Temporales
+*.tmp
+*.bak
+*~

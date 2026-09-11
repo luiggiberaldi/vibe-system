@@ -1,0 +1,145 @@
+# Bitácora del Proyecto — Vibe System (Sistema de Proyectos)
+
+> **Estado:** ACTIVO  
+> **Tipo:** historial cronológico breve de sesiones, decisiones, avances, bloqueos e incidentes  
+> **Fuente de verdad:** Sí, para el orden temporal de lo ocurrido en Vibe System; no sustituye documentos especializados  
+> **Responsable:** Luigi  
+> **Clasificación:** INTERNA  
+> **Versión:** 1.0.0  
+> **Creado:** 2026-09-11  
+> **Última actualización:** 2026-09-11  
+> **Próxima revisión:** al finalizar cada sesión de trabajo relevante  
+
+---
+
+## 0. Para qué sirve
+
+Esta bitácora es el diario corto y cronológico de **Vibe System**. No guarda transcripciones completas ni repite la arquitectura: registra únicamente los hechos significativos, decisiones tomadas, bloqueos resueltos y la siguiente acción inmediata.
+
+Sirve para retomar el trabajo sin fricción. Al abrir una nueva sesión, el primer paso obligado para Luigi o la IA es leer la última entrada de esta bitácora y `fuentes-principales/inteligencia.md`.
+
+> **Regla de oro:** si una sesión cambió un documento, un parámetro, un flujo o una decisión, debe quedar una entrada registrada antes de concluir.
+
+---
+
+## 1. Protocolo de registro de sesión
+
+Cada nueva sesión se agrega en la parte superior de la sección de entradas cronológicas (orden inverso), utilizando esta estructura estandarizada:
+
+```md
+## YYYY-MM-DD — [Título descriptivo de la sesión]
+
+- Estado de sesión: INICIADA / EN PROGRESO / CERRADA / BLOQUEADA
+- Hito/epic: H[n] / E-[n] / Core
+- Responsable: Luigi
+- Objetivo: [qué se buscaba lograr en la sesión]
+
+### Hecho
+- [qué se completó con enlaces a archivos creados o editados]
+
+### Decisiones
+- [ID]: [decisión tomada y justificación concisa]
+
+### Riesgos, errores o bloqueos
+- [ID]: [riesgo o bloqueo identificado y acción de mitigación]
+
+### Documentos creados o actualizados
+- `ruta/archivo.md` — [descripción del cambio]
+
+### Evidencia
+- [pruebas ejecutadas, auditorías, commits o verificación de integridad]
+
+### Siguiente paso
+- [una acción pequeña, clara y concreta para la próxima sesión]
+```
+
+---
+
+## 2. Lectura rápida del estado actual
+
+| Elemento | Estado al 2026-09-11 |
+|---|---|
+| Sistema | Vibe System — Meta-Framework y Sistema Operativo Documental |
+| Hito actual | H0 — Cimentación de Especificaciones Maestras |
+| Desacoplamiento de proyectos | Completado (un proyecto de aplicación externo extraído y preservado) |
+| Fuentes de control | Activas (`convenciones.md`, `DoR`, `DoD`, `estados`, `glosario`, `pre-commit`) |
+| Fuentes principales | Activas (`agent.md`, `inteligencia.md`, `bitacora.md`) |
+| Especificaciones maestras | En proceso de redacción (`01-requisitos/`, `03-arquitectura/`) |
+| Próxima entrega | Publicación de especificaciones de Flujo, Parámetros y Actualización |
+
+---
+
+## 3. Entradas cronológicas
+
+## 2026-09-11 — Consolidación y Certificación de Vibe System v1.0.0 (Cierre de H0)
+
+- Estado de sesión: CERRADA
+- Hito/epic: H0 — Fundación y Cimentación Maestra
+- Responsable: Luigi
+- Objetivo: Completar el 100% de la documentación normativa, decisiones arquitectónicas, gestión de riesgos, guías operativas y auditoría de cierre de Vibe System v1.0.0.
+
+### Hecho
+- Desacoplamiento total y extracción de "El Guardián" a carpeta externa independiente (11 archivos resguardados al 100%).
+- Normalización y actualización de la tríada de memoria viva: `agent.md`, `inteligencia.md` y `bitacora.md`.
+- Redacción de las especificaciones maestras en `01-requisitos/` (Visión, Flujo de Ejecución, Parámetros PAR-01 a PAR-06, Mecanismo de Actualización, Ciclo de Vida y Starter Kit).
+- Formalización de los 3 ADRs fundacionales en `02-decisiones/` (ADR-001 Docs en Markdown, ADR-002 Tríada de Memoria y Autoridad Humana, ADR-003 Techo de ~600 Líneas).
+- Creación del módulo de IA en `04-ia/`: `system-prompt-vibe-coder.md` y `protocolo-anti-alucinaciones.md`.
+- Creación del registro formal de riesgos en `09-riesgos/registro-riesgos-vibe-system.md` (RSK-001 a RSK-006).
+- Creación del runbook de arranque en `07-operacion/guia-de-arranque-de-nuevo-proyecto.md`.
+- Ejecución y aprobación de la auditoría formal de cierre en `11-auditorias/auditoria-H0-fundacion-vibe-system.md`.
+- Creación del atlas visual en `03-arquitectura/diagramas-de-flujo.md` e integración de diagramas interactivos Mermaid en `flujo-de-ejecucion.md` y `arquitectura-documental-vibe-system.md`.
+- Publicación de las notas de lanzamiento oficial en `14-entregas/RELEASE-NOTES-v1.0.0.md`.
+
+### Decisiones
+- D-001 a D-010 y ADR-001 a ADR-003: Ratificadas como arquitectura inmutable del framework.
+- Certificación formal de H0 como APROBADO sin reservas.
+
+### Evidencia
+- Verificación automática de cero residuos de proyectos de aplicación.
+- Auditoría formal `auditoria-H0-fundacion-vibe-system.md` en estado APROBADA.
+- 34 documentos Markdown estructurados y sincronizados en el workspace.
+
+### Siguiente paso
+- Iniciar Hito H1: Instanciación del Starter Kit en un proyecto piloto real aplicando el ciclo de 5 fases.
+
+---
+
+## 2026-09-11 — Desacoplamiento total de proyectos de aplicación externos a su propio repositorio
+
+- Estado de sesión: CERRADA
+- Hito/epic: H0 — Limpieza y Desacoplamiento
+- Responsable: Luigi
+- Objetivo: Extraer cualquier contenido, regla o archivo perteneciente al juego proyectos de aplicación externos de `sistema de proyectos` y transferirlo a su carpeta independiente sin pérdida de datos.
+
+### Hecho
+- Creación del directorio de destino `c:\Users\luigg\Desktop\documentos de facil creacion\carpeta externa de proyecto\`.
+- Migración de archivos de producto: `planmaestro.md`, `arquitectura.md`, `roadmap.md`, `matriz-trazabilidad.md`, `registro-riesgos.md`, `auditoria-H0.md` y `auditoria-conversacion.md`.
+- Respaldo de seguridad de la tríada original del juego (`agent.md`, `inteligencia.md`, `bitacora.md`) y de la conversación fundacional completa (`conversacion.md`).
+- Eliminación en `sistema de proyectos` del borrador histórico con menciones del juego y creación de `13-investigacion/borradores/origen-del-sistema.md`.
+- Verificación de limpieza léxica en documentos de control (`00-control/`).
+
+### Decisiones
+- D-006: `sistema de proyectos` se reserva exclusivamente como el estándar maestro y documentación de Vibe System.
+- Preservación 100% íntegra de la propiedad intelectual y diseño de un proyecto de aplicación externo en su carpeta dedicada.
+
+### Evidencia
+- Verificación por script de migración y auditoría de archivos en ambos directorios.
+
+---
+
+## 2026-09-10 — Ideación inicial de Vibe System y control de proyectos
+
+- Estado de sesión: CERRADA
+- Hito/epic: H0 — Génesis
+- Responsable: Luigi
+- Objetivo: Diseñar una metodología documental para estructurar el desarrollo asistido por IA evitando la degradación de contexto.
+
+### Hecho
+- Definición de la estructura de carpetas estandarizada `00-control/` a `14-entregas/`.
+- Creación de plantillas iniciales: DoR, DoD, estados de trabajo, convenciones y glosario.
+- Concepción de la tríada de memoria viva (`agent.md`, `inteligencia.md`, `bitacora.md`).
+
+### Decisiones
+- D-001: Formato Markdown versionado como estándar universal.
+- D-003: Techo orientativo de ~600 líneas por documento operativo.
+- D-004: DoR obligatorio antes de escribir código.
