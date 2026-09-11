@@ -176,7 +176,7 @@ roadmap.md
 | Criterio de aceptación | `CA-` | `CA-008` | Resultado verificable |
 | Decisión | `D-` | `D-009` | Decisión vigente del proyecto |
 | ADR | `ADR-` | `ADR-004` | Decisión estructural documentada |
-| Riesgo | `R-` | `R-003` | Riesgo de producto, seguridad, costo o legalidad |
+| Riesgo | `RSK-` | `RSK-003` | Riesgo de producto, seguridad, costo o legalidad |
 | Deuda técnica | `DT-` | `DT-002` | Deuda registrada y controlada |
 | Dependencia externa | `DEP-` | `DEP-001` | Proveedor, acceso, persona o condición externa |
 | Pregunta pendiente | `Q-` | `Q-007` | Pregunta sin resolver |
@@ -427,7 +427,7 @@ Todo contenido relevante debe poder clasificarse como:
 | Decisión | `D-` / `ADR-` | Tiene responsable, motivo y estado |
 | Supuesto | `SUP-` | No se presenta como hecho |
 | Pregunta pendiente | `Q-` | Tiene dueño y revisión |
-| Riesgo | `R-` | Tiene impacto, mitigación y dueño |
+| Riesgo | `RSK-` | Tiene impacto, mitigación y dueño |
 | Aprendizaje | `L-` | Tiene evidencia y aplicación |
 | Error conocido | `ERR-` | Tiene causa y prevención |
 | Información deprecada | `O-` o estado `DEPRECADO` | Indica reemplazo |
@@ -478,7 +478,7 @@ Usar tablas para información comparable y rastreable:
 ```md
 | ID | Elemento | Estado | Responsable | Siguiente acción |
 |---|---|---|---|---|
-| R-001 | Riesgo legal | Abierto | Luigi | Consultar especialista antes de monetización |
+| RSK-001 | Riesgo legal | Abierto | Luigi | Consultar especialista antes de monetización |
 ```
 
 ### Checklists

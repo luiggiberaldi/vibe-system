@@ -5,7 +5,7 @@
 > **Fuente de verdad:** Sí, para todos los parámetros técnicos y operativos del sistema  
 > **Responsable:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 1.0.0  
+> **Versión:** 1.1.0  
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
 
@@ -19,11 +19,16 @@ Este documento compila el catálogo formal de **parámetros cuantitativos, umbra
 
 ## 1. Catálogo Maestro de Parámetros
 
-### PAR-01: Límite de Longitud de Archivo (Techo de Contexto)
-- **Valor nominal:** Máximo 600 líneas de texto/código.
-- **Umbral de advertencia:** 500 líneas (evaluar división en componentes o submódulos).
-- **Tolerancia máxima:** 650 líneas (exclusivamente para tablas extensas o glosarios consolidados).
-- **Justificación técnica:** Los LLMs experimentan pérdida de atención (*lost in the middle*) y aumento drástico de alucinaciones en archivos con ventanas largas de tokens. Mantener archivos por debajo de 600 líneas garantiza precisión máxima en búsquedas y ediciones.
+### PAR-01: Límites Escalonados de Tamaño Documental (Techo de Contexto)
+> Evolucionado por **ADR-004** (2026-09-11). Fundamento cuantitativo: ADR-003 (*lost in the middle*).
+
+| Clase de documento | Ejemplos | Límite | Mecanismo cuando crece |
+|---|---|---|---|
+| **Normativo** (la IA lo lee completo) | PAR, DoR, DoD, convenciones, `agent.md` | ≤600 líneas; aviso en 500; tolerancia 650 solo para tablas o glosarios consolidados | Dividir en submódulos con índice |
+| **Registro anexo** (append-only) | `bitacora.md`, changelogs, registro de riesgos | Sin techo duro | Rotar entradas antiguas a anexos por período (ej. `bitacora-anexos/bitacora-2026-H2.md`); el archivo activo conserva ventana reciente + índice de anexos |
+| **Referencia** (consulta por búsqueda) | glosario | Techo flexible | Dividir por dominios con documento índice |
+
+- **Justificación técnica:** Los LLMs experimentan pérdida de atención (*lost in the middle*) y aumento drástico de alucinaciones en archivos con ventanas largas de tokens. El techo de 600 líneas se aplica donde duele: los documentos normativos que la IA lee completos.
 
 ### PAR-02: Topología Canónica de Carpetas
 Todo proyecto basado en Vibe System adopta la estructura numérica normalizada:
@@ -36,7 +41,7 @@ Todo proyecto basado en Vibe System adopta la estructura numérica normalizada:
 | `02-decisiones/` | Registro de Decisiones | ADRs (`ADR-xxx-[slug].md`) |
 | `03-arquitectura/` | Diseño Técnico | Planos arquitectónicos, diagramas, modelo de datos |
 | `04-ia/` | IA & Prompts | System prompts, políticas de modelos, adaptadores de IA |
-| `05-seguridad/` | Seguridad & Privacidad | Modelado de amenazas, políticas de datos, auditoría de permisos |
+| `05-ux/` | UX & Diseño | Flujos, interacción y diseño de pantallas (canónica según ADR-005) |
 | `06-calidad/` | Aseguramiento de Calidad | Estrategia de calidad, matrices de pruebas, métricas |
 | `07-operacion/` | Operación & Infraestructura | Procedimientos operativos, scripts de arranque, backups |
 | `08-legal-y-confianza/` | Términos & Cumplimiento | Términos de servicio, políticas de privacidad, descargos |
@@ -65,7 +70,7 @@ Todos los elementos del sistema deben etiquetarse mediante sintaxis determinista
 | Manual Operativo / Runbook | `RBK-` | `RBK-[nnn]-[slug].md` | `RBK-001-despliegue-staging.md` |
 
 ### PAR-04: Máquina de Estados Formal
-Los ítems de trabajo (tareas, requisitos y documentos) deben transitar exclusivamente entre los siguientes 7 estados normativos:
+Los ítems de trabajo (tareas, requisitos y documentos) transitan entre los estados definidos en `00-control/estados-del-trabajo.md` (documento de autoridad, 10 estados). Este parámetro lista los **7 estados centrales** de trabajo diario (resumen, no fuente de verdad):
 
 1. `IDEA`: Propuesta no validada ni dimensionada.
 2. `ESPECIFICADO`: Documentada con criterios de aceptación; pendiente de DoR.

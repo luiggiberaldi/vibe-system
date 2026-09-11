@@ -5,7 +5,7 @@
 > **Fuente de verdad:** Sí, para la secuencia de corrección de la documentación  
 > **Responsable:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 1.0.0  
+> **Versión:** 1.1.0  
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
 > **Relacionado con:** `11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md`, `01-requisitos/parametros-del-sistema.md`, `00-control/convenciones.md`  
@@ -115,3 +115,5 @@ Pueden ejecutarse en una sola sesión larga si Luigi aprueba las decisiones de F
 | Fecha | Cambio | Responsable |
 |---|---|---|
 | 2026-09-11 | Creación del plan a partir de AUD-VS-001 y decisiones de Luigi (regla escalonada, repositorio GitHub) | Buffy (agente IA) |
+| 2026-09-11 | Fase 0 ejecutada: T-DOC-001 completo (git init, .gitignore, .gitattributes LF, commit base `a443929`, remote `origin` configurado); T-DOC-002 pendiente de push con confirmación de Luigi | Buffy (agente IA) |
+| 2026-09-11 | Fase 1 ejecutada: T-DOC-003 (ADR-004 ACEPTADA + PAR-01 escalonado + regla #3 del README), T-DOC-004 (ADR-005 ACEPTADA + PAR-02 con `05-ux/`), T-DOC-005 (`RSK-` en convenciones) | Buffy (agente IA) |
