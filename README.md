@@ -42,12 +42,12 @@ Cualquier proyecto construido bajo Vibe System sigue un ciclo de vida predecible
 ### Etapa 2: Fundación Documental (El Paquete Inicial)
 - Se copia la estructura de carpetas estándar (`00` a `14` y `fuentes-principales/`).
 - Se configuran los 3 pilares de memoria viva:
-  - [`fuentes-principales/agent.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/agent.md): Las instrucciones operativas que la IA debe obedecer.
-  - [`fuentes-principales/inteligencia.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/inteligencia.md): La memoria curada (decisiones vigentes, hechos, bloqueos).
-  - [`fuentes-principales/bitacora.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/bitacora.md): El historial cronológico de sesiones.
+  - [`fuentes-principales/agent.md`](fuentes-principales/agent.md): Las instrucciones operativas que la IA debe obedecer.
+  - [`fuentes-principales/inteligencia.md`](fuentes-principales/inteligencia.md): La memoria curada (decisiones vigentes, hechos, bloqueos).
+  - [`fuentes-principales/bitacora.md`](fuentes-principales/bitacora.md): El historial cronológico de sesiones.
 
 ### Etapa 3: Preparación de Tareas bajo DoR
-- Ninguna tarea se inicia sin cumplir la [`00-control/definition-of-ready.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/definition-of-ready.md).
+- Ninguna tarea se inicia sin cumplir la [`00-control/definition-of-ready.md`](00-control/definition-of-ready.md).
 - Cada tarea debe tener un ID único, archivo afectado, criterios de aceptación (`CA-###`) y prueba esperada.
 
 ### Etapa 4: Construcción y Verificación Determinista
@@ -56,8 +56,8 @@ Cualquier proyecto construido bajo Vibe System sigue un ciclo de vida predecible
 - Se prohíbe el uso de credenciales o secretos reales en prompts o repositorios.
 
 ### Etapa 5: Cierre, Auditoría y Actualización de Memoria
-- Se comprueba la [`00-control/definition-of-done.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/definition-of-done.md).
-- Se corre el checklist [`00-control/pre-commit-gate-checklist.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/pre-commit-gate-checklist.md).
+- Se comprueba la [`00-control/definition-of-done.md`](00-control/definition-of-done.md).
+- Se corre el checklist [`00-control/pre-commit-gate-checklist.md`](00-control/pre-commit-gate-checklist.md).
 - Se actualizan `bitacora.md` e `inteligencia.md` para que la siguiente sesión conserve el 100% del contexto.
 
 ---
@@ -116,30 +116,30 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 
 | Documento | Ubicación | Qué define |
 |---|---|---|
-| **Roadmap del Framework** | [`00-control/roadmap-vibe-system.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/roadmap-vibe-system.md) | Hitos estratégicos y evolución de Vibe System |
-| **Visión y Alcance** | [`01-requisitos/vision-y-alcance-vibe-system.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/01-requisitos/vision-y-alcance-vibe-system.md) | Propósito, problemas resueltos y límites no negociables |
-| **Flujo de Ejecución** | [`01-requisitos/flujo-de-ejecucion.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/01-requisitos/flujo-de-ejecucion.md) | Ciclo de 5 fases y protocolo de sesión diaria de trabajo |
-| **Parámetros del Sistema** | [`01-requisitos/parametros-del-sistema.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/01-requisitos/parametros-del-sistema.md) | Catálogo normativo de constantes, límites (600 líneas) e IDs |
-| **Mecanismo de Actualización** | [`01-requisitos/mecanismo-de-actualizacion.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/01-requisitos/mecanismo-de-actualizacion.md) | Versionado SemVer, sincronización de plantillas y RFCs |
-| **Ciclo de Vida de Proyecto** | [`01-requisitos/ciclo-de-vida-de-proyecto.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/01-requisitos/ciclo-de-vida-de-proyecto.md) | Etapas de maduración de un proyecto y gates de transición |
-| **Paquete Inicial (Starter Kit)** | [`01-requisitos/paquete-inicial-de-proyecto.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/01-requisitos/paquete-inicial-de-proyecto.md) | Estructura base para inicializar proyectos en 10 minutos |
-| **Arquitectura Documental** | [`03-arquitectura/arquitectura-documental-vibe-system.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/03-arquitectura/arquitectura-documental-vibe-system.md) | Topología de capas y flujo de información entre documentos |
-| **Diagramas de Flujo** | [`03-arquitectura/diagramas-de-flujo.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/03-arquitectura/diagramas-de-flujo.md) | Atlas visual de macroflujo, microflujo y estados del sistema |
-| **Convenciones del Sistema** | [`00-control/convenciones.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/convenciones.md) | Reglas de nombres, IDs, rutas, Git y formato |
-| **Estados del Trabajo** | [`00-control/estados-del-trabajo.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/estados-del-trabajo.md) | Ciclo de estados normativos (`IDEA` a `COMPLETADO`) |
-| **Definition of Ready** | [`00-control/definition-of-ready.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/definition-of-ready.md) | Criterios obligatorios para iniciar una tarea |
-| **Definition of Done** | [`00-control/definition-of-done.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/definition-of-done.md) | Criterios obligatorios para dar por cerrada una tarea |
-| **Pre-Commit Gate Checklist** | [`00-control/pre-commit-gate-checklist.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/pre-commit-gate-checklist.md) | Filtro de calidad antes de guardar cambios |
-| **Glosario Operativo** | [`00-control/glosario.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/glosario.md) | Diccionario de términos universales y definiciones compartidas |
-| **ADR-001 Docs en Markdown** | [`02-decisiones/ADR-001-arquitectura-documental-markdown.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/02-decisiones/ADR-001-arquitectura-documental-markdown.md) | Justificación de Markdown en Git frente a herramientas SaaS |
-| **ADR-002 Memoria y Autoridad** | [`02-decisiones/ADR-002-triada-de-memoria-y-autoridad-humana.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/02-decisiones/ADR-002-triada-de-memoria-y-autoridad-humana.md) | Justificación de la tríada de memoria viva y control humano |
-| **ADR-003 Techo de 600 Líneas** | [`02-decisiones/ADR-003-techo-600-lineas-anti-lost-in-middle.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/02-decisiones/ADR-003-techo-600-lineas-anti-lost-in-middle.md) | Justificación cuantitativa para mitigar pérdida de atención en LLMs |
-| **System Prompt Maestro** | [`04-ia/system-prompt-vibe-coder.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/04-ia/system-prompt-vibe-coder.md) | Prompt de sistema reutilizable para Cursor, Claude, Antigravity |
-| **Protocolo Anti-Alucinaciones** | [`04-ia/protocolo-anti-alucinaciones.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/04-ia/protocolo-anti-alucinaciones.md) | Disciplina de verificación determinista para agentes de IA |
-| **Guía de Arranque Rápido** | [`07-operacion/guia-de-arranque-de-nuevo-proyecto.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/07-operacion/guia-de-arranque-de-nuevo-proyecto.md) | Procedimiento paso a paso para nuevo proyecto en 5 min |
-| **Registro de Riesgos** | [`09-riesgos/registro-riesgos-vibe-system.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/09-riesgos/registro-riesgos-vibe-system.md) | Matriz de riesgos metodológicos y mitigaciones |
-| **Auditoría Cierre H0** | [`11-auditorias/auditoria-H0-fundacion-vibe-system.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/11-auditorias/auditoria-H0-fundacion-vibe-system.md) | Certificación formal de la base documental v1.0.0 |
-| **Release Notes v1.0.0** | [`14-entregas/RELEASE-NOTES-v1.0.0.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/14-entregas/RELEASE-NOTES-v1.0.0.md) | Acta de lanzamiento oficial de Vibe System |
-| **Reglas de Trabajo para IA** | [`fuentes-principales/agent.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/agent.md) | Protocolo y límites de autoridad para asistentes de IA |
-| **Memoria del Sistema** | [`fuentes-principales/inteligencia.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/inteligencia.md) | Contexto curado, decisiones y hechos verificados |
-| **Bitácora de Sesiones** | [`fuentes-principales/bitacora.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/bitacora.md) | Diario cronológico de sesiones de trabajo |
+| **Roadmap del Framework** | [`00-control/roadmap-vibe-system.md`](00-control/roadmap-vibe-system.md) | Hitos estratégicos y evolución de Vibe System |
+| **Visión y Alcance** | [`01-requisitos/vision-y-alcance-vibe-system.md`](01-requisitos/vision-y-alcance-vibe-system.md) | Propósito, problemas resueltos y límites no negociables |
+| **Flujo de Ejecución** | [`01-requisitos/flujo-de-ejecucion.md`](01-requisitos/flujo-de-ejecucion.md) | Ciclo de 5 fases y protocolo de sesión diaria de trabajo |
+| **Parámetros del Sistema** | [`01-requisitos/parametros-del-sistema.md`](01-requisitos/parametros-del-sistema.md) | Catálogo normativo de constantes, límites (600 líneas) e IDs |
+| **Mecanismo de Actualización** | [`01-requisitos/mecanismo-de-actualizacion.md`](01-requisitos/mecanismo-de-actualizacion.md) | Versionado SemVer, sincronización de plantillas y RFCs |
+| **Ciclo de Vida de Proyecto** | [`01-requisitos/ciclo-de-vida-de-proyecto.md`](01-requisitos/ciclo-de-vida-de-proyecto.md) | Etapas de maduración de un proyecto y gates de transición |
+| **Paquete Inicial (Starter Kit)** | [`01-requisitos/paquete-inicial-de-proyecto.md`](01-requisitos/paquete-inicial-de-proyecto.md) | Estructura base para inicializar proyectos en 10 minutos |
+| **Arquitectura Documental** | [`03-arquitectura/arquitectura-documental-vibe-system.md`](03-arquitectura/arquitectura-documental-vibe-system.md) | Topología de capas y flujo de información entre documentos |
+| **Diagramas de Flujo** | [`03-arquitectura/diagramas-de-flujo.md`](03-arquitectura/diagramas-de-flujo.md) | Atlas visual de macroflujo, microflujo y estados del sistema |
+| **Convenciones del Sistema** | [`00-control/convenciones.md`](00-control/convenciones.md) | Reglas de nombres, IDs, rutas, Git y formato |
+| **Estados del Trabajo** | [`00-control/estados-del-trabajo.md`](00-control/estados-del-trabajo.md) | Ciclo de estados normativos (`IDEA` a `COMPLETADO`) |
+| **Definition of Ready** | [`00-control/definition-of-ready.md`](00-control/definition-of-ready.md) | Criterios obligatorios para iniciar una tarea |
+| **Definition of Done** | [`00-control/definition-of-done.md`](00-control/definition-of-done.md) | Criterios obligatorios para dar por cerrada una tarea |
+| **Pre-Commit Gate Checklist** | [`00-control/pre-commit-gate-checklist.md`](00-control/pre-commit-gate-checklist.md) | Filtro de calidad antes de guardar cambios |
+| **Glosario Operativo** | [`00-control/glosario.md`](00-control/glosario.md) | Diccionario de términos universales y definiciones compartidas |
+| **ADR-001 Docs en Markdown** | [`02-decisiones/ADR-001-arquitectura-documental-markdown.md`](02-decisiones/ADR-001-arquitectura-documental-markdown.md) | Justificación de Markdown en Git frente a herramientas SaaS |
+| **ADR-002 Memoria y Autoridad** | [`02-decisiones/ADR-002-triada-de-memoria-y-autoridad-humana.md`](02-decisiones/ADR-002-triada-de-memoria-y-autoridad-humana.md) | Justificación de la tríada de memoria viva y control humano |
+| **ADR-003 Techo de 600 Líneas** | [`02-decisiones/ADR-003-techo-600-lineas-anti-lost-in-middle.md`](02-decisiones/ADR-003-techo-600-lineas-anti-lost-in-middle.md) | Justificación cuantitativa para mitigar pérdida de atención en LLMs |
+| **System Prompt Maestro** | [`04-ia/system-prompt-vibe-coder.md`](04-ia/system-prompt-vibe-coder.md) | Prompt de sistema reutilizable para Cursor, Claude, Antigravity |
+| **Protocolo Anti-Alucinaciones** | [`04-ia/protocolo-anti-alucinaciones.md`](04-ia/protocolo-anti-alucinaciones.md) | Disciplina de verificación determinista para agentes de IA |
+| **Guía de Arranque Rápido** | [`07-operacion/guia-de-arranque-de-nuevo-proyecto.md`](07-operacion/guia-de-arranque-de-nuevo-proyecto.md) | Procedimiento paso a paso para nuevo proyecto en 5 min |
+| **Registro de Riesgos** | [`09-riesgos/registro-riesgos-vibe-system.md`](09-riesgos/registro-riesgos-vibe-system.md) | Matriz de riesgos metodológicos y mitigaciones |
+| **Auditoría Cierre H0** | [`11-auditorias/auditoria-H0-fundacion-vibe-system.md`](11-auditorias/auditoria-H0-fundacion-vibe-system.md) | Certificación formal de la base documental v1.0.0 |
+| **Release Notes v1.0.0** | [`14-entregas/RELEASE-NOTES-v1.0.0.md`](14-entregas/RELEASE-NOTES-v1.0.0.md) | Acta de lanzamiento oficial de Vibe System |
+| **Reglas de Trabajo para IA** | [`fuentes-principales/agent.md`](fuentes-principales/agent.md) | Protocolo y límites de autoridad para asistentes de IA |
+| **Memoria del Sistema** | [`fuentes-principales/inteligencia.md`](fuentes-principales/inteligencia.md) | Contexto curado, decisiones y hechos verificados |
+| **Bitácora de Sesiones** | [`fuentes-principales/bitacora.md`](fuentes-principales/bitacora.md) | Diario cronológico de sesiones de trabajo |

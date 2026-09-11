@@ -91,7 +91,7 @@ wip
 [ ] Los archivos nuevos tienen título y cabecera si son documentos importantes.
 [ ] No hay caracteres corruptos, texto ilegible o problemas de codificación UTF-8.
 [ ] Los enlaces internos modificados apuntan a la ruta correcta.
-[ ] El cambio no contradice `planmaestro.md`, `arquitectura.md` o una decisión vigente.
+[ ] El cambio no contradice el plan maestro del proyecto, el plano de arquitectura en `03-arquitectura/` o una decisión vigente.
 [ ] La bitácora se actualizó si el cambio es relevante.
 [ ] La inteligencia se actualizó si apareció hecho, decisión, aprendizaje, riesgo o bloqueo durable.
 [ ] El diff fue revisado: sé exactamente qué se va a guardar.

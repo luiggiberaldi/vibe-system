@@ -77,12 +77,12 @@ No mover esta tarea a `LISTO` hasta completar lo necesario.
 
 ### Documentos que se deben leer
 
-- [ ] `roadmap.md`.
-- [ ] `planmaestro.md`.
-- [ ] `arquitectura.md`.
+- [ ] el roadmap del proyecto.
+- [ ] el plan maestro del proyecto.
+- [ ] el plano de arquitectura en `03-arquitectura/`.
 - [ ] `inteligencia.md`.
 - [ ] `glosario.md`.
-- [ ] `matriz-trazabilidad.md`.
+- [ ] la matriz de trazabilidad del proyecto (si existe).
 - [ ] [Documento adicional].
 
 ---
@@ -207,8 +207,8 @@ No cerrar esta tarea hasta que se cumpla todo lo aplicable:
 [ ] Se documentó rollback/fallback si toca una ruta sensible.
 [ ] `bitacora.md` fue actualizada.
 [ ] `inteligencia.md` fue actualizada si hubo hecho, decisión, aprendizaje, riesgo o bloqueo durable.
-[ ] `arquitectura.md` fue actualizada si cambió componente, dato, estado, contrato o integración.
-[ ] `matriz-trazabilidad.md` fue actualizada si cambió regla, test, alerta o runbook crítico.
+[ ] el plano de arquitectura en `03-arquitectura/` fue actualizada si cambió componente, dato, estado, contrato o integración.
+[ ] la matriz de trazabilidad del proyecto (si existe) fue actualizada si cambió regla, test, alerta o runbook crítico.
 [ ] `registro-riesgos.md` fue actualizado si cambió un riesgo.
 [ ] ADR existe si se tomó una decisión estructural.
 [ ] Revisión/auditoría aprobada según riesgo.

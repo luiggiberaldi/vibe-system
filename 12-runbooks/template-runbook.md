@@ -265,8 +265,8 @@ Actualizaremos cuando tengamos una solución verificada.
 [ ] `bitacora.md` con secuencia, resultado y siguiente paso.
 [ ] `inteligencia.md` con aprendizaje, error conocido, riesgo o decisión durable.
 [ ] `registro-riesgos.md` con riesgo nuevo o cambio de nivel.
-[ ] `matriz-trazabilidad.md` con test, alerta o runbook asociado.
-[ ] `arquitectura.md` si cambió un límite, componente, contrato o fallback.
+[ ] la matriz de trazabilidad del proyecto (si existe) con test, alerta o runbook asociado.
+[ ] el plano de arquitectura en `03-arquitectura/` si cambió un límite, componente, contrato o fallback.
 [ ] ADR si se tomó una decisión estructural.
 [ ] Documento de pruebas con regresión creada.
 [ ] Documento de auditoría/post-mortem para incidentes altos o críticos.

@@ -22,9 +22,9 @@ El desarrollo iterativo con agentes de Inteligencia Artificial sufre comúnmente
 Se decide implementar una **arquitectura de memoria viva tripartita** y el **principio de autoridad humana única**:
 
 1. **La Tríada de Memoria (`fuentes-principales/`):**
-   - [`agent.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/agent.md): Contrato inmutable de comportamiento y límites para la IA.
-   - [`inteligencia.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/inteligencia.md): Memoria semántica curada (estado actual, hechos verificados `F-xxx`, decisiones `D-xxx` y bloqueos).
-   - [`bitacora.md`](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/fuentes-principales/bitacora.md): Historial cronológico corto de sesiones de trabajo (qué se hizo, evidencia y siguiente paso).
+   - [`agent.md`](../fuentes-principales/agent.md): Contrato inmutable de comportamiento y límites para la IA.
+   - [`inteligencia.md`](../fuentes-principales/inteligencia.md): Memoria semántica curada (estado actual, hechos verificados `F-xxx`, decisiones `D-xxx` y bloqueos).
+   - [`bitacora.md`](../fuentes-principales/bitacora.md): Historial cronológico corto de sesiones de trabajo (qué se hizo, evidencia y siguiente paso).
 
 2. **Autoridad Humana Única (Single Human Authority):**
    - **Luigi es la única autoridad decisoria:** La IA actúa como copiloto técnico, investigadora, redactora y asistente de pruebas; nunca aprueba por sí sola cambios de alcance, nuevos requisitos o excepciones de seguridad.

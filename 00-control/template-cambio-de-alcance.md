@@ -183,12 +183,12 @@ Seleccionar uno:
 ## 7. Actualizaciones obligatorias
 
 ```text
-[ ] Actualicé `planmaestro.md` si cambió alcance o prioridad.
-[ ] Actualicé `roadmap.md` si cambió hito, epic, issue o dependencia.
+[ ] Actualicé el plan maestro del proyecto si cambió alcance o prioridad.
+[ ] Actualicé el roadmap del proyecto si cambió hito, epic, issue o dependencia.
 [ ] Actualicé `inteligencia.md` con la decisión durable.
 [ ] Actualicé `bitacora.md` con la sesión y siguiente paso.
-[ ] Actualicé `arquitectura.md` si cambió componentes, datos, contratos o proveedores.
-[ ] Actualicé `matriz-trazabilidad.md` si cambió regla, prueba, alerta o runbook crítico.
+[ ] Actualicé el plano de arquitectura en `03-arquitectura/` si cambió componentes, datos, contratos o proveedores.
+[ ] Actualicé la matriz de trazabilidad del proyecto (si existe) si cambió regla, prueba, alerta o runbook crítico.
 [ ] Actualicé `registro-riesgos.md` si cambió riesgo, dependencia o deuda.
 [ ] Creé ADR si el cambio es estructural.
 [ ] Creé/actualicé pruebas y runbook si corresponde.

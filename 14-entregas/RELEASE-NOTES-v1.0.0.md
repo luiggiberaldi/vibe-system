@@ -43,4 +43,4 @@ Un proceso de vida riguroso:
 
 ## 2. Cómo Comenzar
 
-Consulta la [Guía de Arranque de Nuevo Proyecto](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/07-operacion/guia-de-arranque-de-nuevo-proyecto.md) para clonar el Starter Kit e inicializar tu primer proyecto gobernado por Vibe System en menos de 5 minutos.
+Consulta la [Guía de Arranque de Nuevo Proyecto](../07-operacion/guia-de-arranque-de-nuevo-proyecto.md) para clonar el Starter Kit e inicializar tu primer proyecto gobernado por Vibe System en menos de 5 minutos.

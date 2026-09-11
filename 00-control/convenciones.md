@@ -139,17 +139,16 @@ archivo(2).md
 
 ### Nombres de fuentes principales
 
-Estos nombres son fijos y no deben cambiarse sin ADR/documento de migración:
+Estos nombres son fijos en los **proyectos derivados** y no deben cambiarse sin ADR/documento de migración. En Vibe System core los equivalentes vigentes son `00-control/roadmap-vibe-system.md` y los planos en `03-arquitectura/`:
 
 ```text
 README.md
 agent.md
 inteligencia.md
 bitacora.md
-planmaestro.md
-arquitectura.md
-roadmap.md
 ```
+
+En proyectos derivados se añaden: `planmaestro.md`, `arquitectura.md`, `roadmap.md`.
 
 ---
 
@@ -445,7 +444,7 @@ Las fuentes externas viven en `13-investigacion/` hasta que una afirmación se v
 Usar ruta relativa entre comillas invertidas:
 
 ```md
-Ver `../00-control/roadmap.md`.
+Ver `../00-control/roadmap-vibe-system.md`.
 Ver `fuentes-principales/inteligencia.md`.
 ```
 
@@ -458,7 +457,7 @@ Relacionado con `RB-006`, `R-007`, `T-IA-003` y `RUN-002`.
 ### Referencia a sección
 
 ```md
-Ver `roadmap.md`, sección “H4 — Integración segura de IA”.
+Ver `roadmap-vibe-system.md`, sección “H4 — Integración segura de IA”.
 ```
 
 ### Regla de enlaces
@@ -747,13 +746,17 @@ Regla:
 - Cambia el estado general del proyecto.
 - Se define una pregunta/bloqueo durable.
 
-### Actualizar `planmaestro.md` cuando
+### Actualizar el plan maestro del proyecto cuando
+
+(En Vibe System core: el roadmap y los parámetros en `01-requisitos/`.)
 
 - Cambia visión, alcance, exclusión, fase, gate o roadmap mayor.
 - Se aprueba una nueva dirección de producto.
 - Se cierra o reabre una fase PM.
 
-### Actualizar `arquitectura.md` cuando
+### Actualizar el plano de arquitectura cuando
+
+(En Vibe System core: `03-arquitectura/arquitectura-documental-vibe-system.md`.)
 
 - Cambia componente, stack, contrato, flujo de datos, estado, integración, rol o permiso.
 - Se agrega migración, estrategia de fallback o mecanismo de auditoría.

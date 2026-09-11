@@ -3,7 +3,7 @@
 > **Estado:** BORRADOR  
 > **Tipo:** auditoría de documento, hito, release, seguridad, privacidad, IA, operación o producto  
 > **ID:** AUD-[ÁMBITO]-[NNN]  
-> **Ámbito auditado:** [H0 / H1 / PM-4 / feature / release / incidente]  
+> **Ámbito auditado:** [hito H0 / H1 / feature / release / incidente]  
 > **Responsable de la auditoría:** [Luigi / rol]  
 > **Responsable del ámbito auditado:** [persona o rol]  
 > **Clasificación:** INTERNA  
@@ -159,8 +159,8 @@ NO APLICA  = no corresponde al ámbito; explicar por qué.
 - [ ] Nombres, IDs, rutas y fechas cumplen `convenciones.md`.
 - [ ] `bitacora.md` registra la sesión/cambio relevante.
 - [ ] `inteligencia.md` refleja hechos, decisiones, riesgos o pendientes durables.
-- [ ] `arquitectura.md` se actualizó si cambió diseño, datos, permisos o integración.
-- [ ] `matriz-trazabilidad.md` se actualizó si cambió una regla crítica.
+- [ ] el plano de arquitectura en `03-arquitectura/` se actualizó si cambió diseño, datos, permisos o integración.
+- [ ] la matriz de trazabilidad del proyecto (si existe) se actualizó si cambió una regla crítica.
 - [ ] ADR existe cuando la decisión es estructural.
 - [ ] Registro de riesgos se actualizó si hay riesgo nuevo o cambiado.
 
@@ -250,9 +250,9 @@ Seleccionar una:
 ```text
 [ ] Actualicé `bitacora.md` con resultado y siguiente paso.
 [ ] Actualicé `inteligencia.md` si surgió decisión, aprendizaje, riesgo o bloqueo durable.
-[ ] Actualicé `roadmap.md` si cambia el estado de hito/issue/gate.
-[ ] Actualicé `arquitectura.md` si la auditoría cambió diseño o límites.
-[ ] Actualicé `matriz-trazabilidad.md` si cambió regla, test, alerta o runbook crítico.
+[ ] Actualicé el roadmap del proyecto si cambia el estado de hito/issue/gate.
+[ ] Actualicé el plano de arquitectura en `03-arquitectura/` si la auditoría cambió diseño o límites.
+[ ] Actualicé la matriz de trazabilidad del proyecto (si existe) si cambió regla, test, alerta o runbook crítico.
 [ ] Actualicé `registro-riesgos.md` si existe riesgo nuevo/modificado.
 [ ] Creé ADR si la auditoría obliga una decisión estructural.
 [ ] Creé/actualicé runbook si apareció un escenario operativo repetible.

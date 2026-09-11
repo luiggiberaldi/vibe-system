@@ -45,7 +45,7 @@ flowchart TD
 
 ### Fase 3: Desglose y Gate DoR (Definition of Ready)
 - **Objetivo:** Dividir el trabajo en tareas atómicas (`T-xxx`) asignadas a un hito (`H[n]`).
-- **Condición inquebrantable:** Ninguna tarea pasa al estado `EN_PROGRESO` si no cumple la totalidad de criterios de la [Definition of Ready](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/definition-of-ready.md).
+- **Condición inquebrantable:** Ninguna tarea pasa al estado `EN_PROGRESO` si no cumple la totalidad de criterios de la [Definition of Ready](../00-control/definition-of-ready.md).
 - **Parámetro:** Cada tarea debe poder ejecutarse y verificarse en un ciclo de 1 a 3 pasos atómicos.
 
 ### Fase 4: Construcción Determinista
@@ -59,8 +59,8 @@ flowchart TD
 ### Fase 5: Validación DoD (Definition of Done) & Cierre
 - **Objetivo:** Aceptar formalmente la tarea o hito con evidencia verificable.
 - **Acciones:**
-  - Pasar el [Pre-Commit Gate Checklist](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/pre-commit-gate-checklist.md).
-  - Verificar todos los criterios de la [Definition of Done](file:///c:/Users/luigg/Desktop/documentos%20de%20facil%20creacion/sistema%20de%20proyectos/00-control/definition-of-done.md).
+  - Pasar el [Pre-Commit Gate Checklist](../00-control/pre-commit-gate-checklist.md).
+  - Verificar todos los criterios de la [Definition of Done](../00-control/definition-of-done.md).
   - Responder a las 4 preguntas de control.
   - Asentar la entrada en `fuentes-principales/bitacora.md`.
 

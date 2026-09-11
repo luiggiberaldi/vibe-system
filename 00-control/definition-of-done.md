@@ -49,7 +49,7 @@ CERRADO
 | `definition-of-ready.md` | ¿Podemos empezar esta tarea? |
 | `definition-of-done.md` | ¿Podemos cerrar esta tarea sin dejar deuda oculta? |
 | `estados-del-trabajo.md` | ¿En qué estado está y qué evidencia existe? |
-| `roadmap.md` | ¿Qué hito/desbloqueo corresponde después? |
+| el roadmap del proyecto | ¿Qué hito/desbloqueo corresponde después? |
 
 ---
 
@@ -200,7 +200,7 @@ Una tarea de alto riesgo puede cerrarse si cumple DoD-L2 y además:
 
 - [ ] `bitacora.md` describe cambio, evidencia, riesgos y siguiente paso.
 - [ ] `inteligencia.md` recoge hechos, decisiones, aprendizajes o riesgos nuevos.
-- [ ] `arquitectura.md` refleja cambios estructurales, contratos o datos.
+- [ ] el plano de arquitectura en `03-arquitectura/` refleja cambios estructurales, contratos o datos.
 - [ ] ADR creado/actualizado si hubo decisión estructural.
 - [ ] Matriz de trazabilidad relaciona requisito → decisión → código → test → métrica → runbook.
 - [ ] Riesgos/deuda técnica fueron actualizados.
@@ -285,8 +285,8 @@ Este checklist se aplica a cualquier tipo de elemento. Si algo no aplica, debe i
 
 - [ ] `bitacora.md` actualizado.
 - [ ] `inteligencia.md` actualizado si existe contexto durable.
-- [ ] `planmaestro.md` actualizado si cambió alcance/fase/gate.
-- [ ] `arquitectura.md` actualizado si cambió diseño, datos, contratos o integración.
+- [ ] el plan maestro del proyecto actualizado si cambió alcance/fase/gate.
+- [ ] el plano de arquitectura en `03-arquitectura/` actualizado si cambió diseño, datos, contratos o integración.
 - [ ] ADR actualizado si hubo decisión estructural.
 - [ ] Riesgos/deuda actualizados.
 - [ ] Matriz de trazabilidad actualizada cuando el elemento es crítico.
@@ -576,7 +576,7 @@ Un incidente no se cierra solo porque “ya no se ve el error”.
 
 - [ ] bitacora.md
 - [ ] inteligencia.md
-- [ ] planmaestro.md
+- [ ] el plan maestro del proyecto
 - [ ] arquitectura.md
 - [ ] ADR
 - [ ] matriz de trazabilidad

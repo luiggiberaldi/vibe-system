@@ -19,6 +19,7 @@ Esta bitácora es el diario corto y cronológico de **Vibe System**. No guarda t
 Sirve para retomar el trabajo sin fricción. Al abrir una nueva sesión, el primer paso obligado para Luigi o la IA es leer la última entrada de esta bitácora y `fuentes-principales/inteligencia.md`.
 
 > **Regla de oro:** si una sesión cambió un documento, un parámetro, un flujo o una decisión, debe quedar una entrada registrada antes de concluir.
+> **Anexos históricos:** las entradas antiguas se rotan a `bitacora-anexos/` conforme a ADR-004 (registro append-only, sin techo duro).
 
 ---
 

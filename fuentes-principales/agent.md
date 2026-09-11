@@ -4,10 +4,10 @@
 > **Fuente de verdad para:** cómo debe trabajar una IA dentro del proyecto  
 > **Responsable humano:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 0.1.0  
+> **Versión:** 1.1.0  
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
-> **Próxima revisión:** al cerrar H0 o antes del primer cambio de código
+> **Próxima revisión:** al cerrar H1 o ante cualquier cambio de ADR
 
 ---
 
@@ -262,9 +262,9 @@ La IA debe:
 |---|---|
 | Se empieza, termina o bloquea trabajo relevante | `bitacora.md` |
 | Se confirma un hecho, decisión, aprendizaje, riesgo o pendiente durable | `inteligencia.md` |
-| Cambia componente, dato, permiso, contrato, estado o integración | `arquitectura.md` |
-| Cambia regla crítica, prueba, alerta o runbook | `matriz-trazabilidad.md` |
-| Cambia alcance, fase, gate o prioridad | `planmaestro.md` y/o `roadmap.md` |
+| Cambia componente, dato, permiso, contrato, estado o integración | el plano de arquitectura en `03-arquitectura/` |
+| Cambia regla crítica, prueba, alerta o runbook | la matriz de trazabilidad del proyecto (si existe) |
+| Cambia alcance, fase, gate o prioridad | el plan maestro del proyecto y/o el roadmap del proyecto |
 | Se toma decisión estructural | ADR en `02-decisiones/` |
 | Aparece riesgo o cambia su impacto | `09-riesgos/registro-riesgos.md` |
 | Aparece incidente o procedimiento repetible | runbook en `12-runbooks/` |
@@ -398,3 +398,5 @@ Este documento queda activo porque:
 | Versión | Fecha | Cambio | Responsable |
 |---|---|---|---|
 | 0.1.0 | 2026-09-11 | Creación de reglas de trabajo para IA, adaptadas a Luigi como vibe coder | Luigi |
+| 1.0.0 | 2026-09-11 | Sincronizada con la certificación v1.0.0 de Vibe System (registro omitido en su momento; AUD-VS-001, AUD-007) | Buffy (agente IA) |
+| 1.1.0 | 2026-09-11 | Referencias a documentos actualizadas tras el plan de fixeo (§8: plan maestro/plano de arquitectura/matriz de trazabilidad como roles documentales); versión realineada a SemVer | Buffy (agente IA) |

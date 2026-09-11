@@ -154,7 +154,7 @@ Una tarea de riesgo medio pasa a `LISTO` si cumple DoR-L1 y además:
 - [ ] Identifica riesgo y mitigación inicial.
 - [ ] Define prueba manual o automatizada esperada.
 - [ ] Indica comportamiento esperado ante error básico.
-- [ ] Confirma que no contradice `planmaestro.md`, `arquitectura.md` o decisiones activas.
+- [ ] Confirma que no contradice el plan maestro del proyecto, el plano de arquitectura en `03-arquitectura/` o decisiones activas.
 - [ ] Define cómo revertir el cambio si algo sale mal, si aplica.
 
 ### Ejemplo L2
@@ -410,7 +410,7 @@ Esta lista se aplica a cualquier nivel; algunos campos pueden indicar “no apli
 - [ ] Se revisó `agent.md`.
 - [ ] Se revisó `inteligencia.md`.
 - [ ] Se revisó `bitacora.md` reciente si aplica.
-- [ ] Se revisó `planmaestro.md`/`arquitectura.md` si aplica.
+- [ ] Se revisó el plan maestro del proyecto/el plano de arquitectura en `03-arquitectura/` si aplica.
 - [ ] Se revisaron ADRs, riesgos y tests relacionados.
 - [ ] No contradice una decisión activa.
 - [ ] Si existe conflicto, está registrado y resuelto o bloquea el issue.
@@ -637,7 +637,7 @@ Antes de mover a `LISTO`, hacer una auditoría breve.
 | Nivel | DoR-L1 o L2 según impacto legal | 
 | Objetivo | Explicar habilidad/no azar con lenguaje claro |
 | Riesgo | Usar lenguaje que parezca apuesta o promesa de ganancia |
-| Fuente | PM-3, glosario legal, copy UX |
+| Fuente | glosario legal, copy UX |
 | Test | Revisión de términos prohibidos y prueba de comprensión |
 | Condición | Si cambia bases, elegibilidad o compromiso contractual o financiero, escalar a L3 |
 

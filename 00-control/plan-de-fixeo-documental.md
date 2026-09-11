@@ -117,3 +117,5 @@ Pueden ejecutarse en una sola sesión larga si Luigi aprueba las decisiones de F
 | 2026-09-11 | Creación del plan a partir de AUD-VS-001 y decisiones de Luigi (regla escalonada, repositorio GitHub) | Buffy (agente IA) |
 | 2026-09-11 | Fase 0 ejecutada: T-DOC-001 completo (git init, .gitignore, .gitattributes LF, commit base `a443929`, remote `origin` configurado); T-DOC-002 pendiente de push con confirmación de Luigi | Buffy (agente IA) |
 | 2026-09-11 | Fase 1 ejecutada: T-DOC-003 (ADR-004 ACEPTADA + PAR-01 escalonado + regla #3 del README), T-DOC-004 (ADR-005 ACEPTADA + PAR-02 con `05-ux/`), T-DOC-005 (`RSK-` en convenciones) | Buffy (agente IA) |
+| 2026-09-11 | Fase 2 ejecutada: T-DOC-006 (40 enlaces absolutos → relativos; 0 `file:///` restantes), T-DOC-008 (referencias colgantes generalizadas en 11 plantillas + agent.md + convenciones), T-DOC-009 (H0 normalizada como AUD-VS-000) | Buffy (agente IA) |
+| 2026-09-11 | Fase 3 ejecutada: T-DOC-010/011 (glosario → índice + 3 módulos, sin vocabulario de juego), T-DOC-012 (agent.md v1.1.0), T-DOC-013 (`bitacora-anexos/` con regla de rotación) | Buffy (agente IA) |

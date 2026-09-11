@@ -1,11 +1,15 @@
-# Auditoría de Cierre — Hito H0: Fundación de Vibe System
+# AUD-VS-000 — Auditoría de Cierre del Hito H0: Fundación de Vibe System
 
+> **ID de auditoría:** AUD-VS-000  
 > **Estado:** APROBADA SIN RESERVAS  
+> **Tipo:** auditoría de hito / certificación  
+> **Ámbito auditado:** Hito H0 — Fundación Metodológica y Desacoplamiento  
+> **Repositorio maestro auditado:** `sistema de proyectos` (Vibe System Core v1.0.0)  
 > **Fecha de Auditoría:** 2026-09-11  
 > **Auditor Responsable:** Luigi  
 > **Asistencia de Auditoría:** Antigravity  
-> **Alcance:** Repositorio maestro `sistema de proyectos` (Vibe System Core v1.0.0)  
 > **Clasificación:** INTERNA / CERTIFICACIÓN DE HITO  
+> **Nota de normalización (2026-09-11):** cabecera e ID añadidos a posteriori conforme a `template-auditoria.md` y a los hallazgos de AUD-VS-001 (T-DOC-009). El contenido del dictamen no se altera; sus evidencias cuantitativas fueron revisadas y corregidas por AUD-VS-001.
 
 ---
 
@@ -14,6 +18,8 @@
 El **Hito H0 (Fundación Metodológica y Desacoplamiento)** se declara formalmente **APROBADO**.
 
 El espacio de trabajo `sistema de proyectos` ha sido purgado exhaustivamente de cualquier código, especificación o terminología perteneciente a proyectos de aplicación específicos. Se ha cimentado la arquitectura documental completa en 8 capas, con especificaciones de flujo de ejecución, parámetros cuantitativos, mecanismo de actualización, ADRs fundacionales y herramientas de control de IA.
+
+> **Revisiones posteriores:** la auditoría AUD-VS-001 (2026-09-11) verificó de forma reproducible esta evidencia y detectó desviaciones en dos criterios (techo de 600 líneas y residuos léxicos en `glosario.md`), remediadas en el plan de fixeo documental y re-certificadas por AUD-VS-002.
 
 ---
 
@@ -34,6 +40,4 @@ El espacio de trabajo `sistema de proyectos` ha sido purgado exhaustivamente de 
 
 ## 3. Conclusión y Habilitación de Siguiente Fase
 
-Con la aprobación formal de esta auditoría:
-1. Se certifica la versión **v1.0.0** de Vibe System como la línea base estable del framework.
-2. Queda formalmente habilitado el inicio del **Hito H1 (Validación en Proyecto Piloto)**, permitiendo utilizar este marco para el desarrollo de proyectos reales.
+La base documental Vibe System Core v1.0.0 queda certificada y habilita el inicio del Hito H1.

@@ -222,8 +222,8 @@ Este ámbito puede marcarse como probado solo cuando:
 ```text
 [ ] Actualicé `bitacora.md` con ejecución y resultado.
 [ ] Actualicé `inteligencia.md` si se confirmó un hecho, aprendizaje, riesgo o error.
-[ ] Actualicé `matriz-trazabilidad.md` con test, métrica o runbook relacionado.
-[ ] Actualicé `arquitectura.md` si cambió contrato, dato, estado o integración.
+[ ] Actualicé la matriz de trazabilidad del proyecto (si existe) con test, métrica o runbook relacionado.
+[ ] Actualicé el plano de arquitectura en `03-arquitectura/` si cambió contrato, dato, estado o integración.
 [ ] Actualicé `registro-riesgos.md` si apareció un riesgo o cambió su impacto.
 [ ] Creé/actualicé ADR si se tomó una decisión estructural.
 [ ] Creé/actualicé runbook si el fallo necesita respuesta operativa repetible.

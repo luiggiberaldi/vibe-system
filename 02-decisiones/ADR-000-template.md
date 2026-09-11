@@ -136,9 +136,9 @@ No incluye:
 
 | Área | Qué debe cambiar | Documento o trabajo relacionado | Estado |
 |---|---|---|---|
-| Roadmap | [hito/issue nuevo o modificado] | `roadmap.md` | Pendiente / Actualizado |
-| Arquitectura | [componente, flujo, contrato o dato] | `arquitectura.md` | Pendiente / Actualizado |
-| Trazabilidad | [regla, test, métrica, alerta o runbook] | `matriz-trazabilidad.md` | Pendiente / Actualizado |
+| Roadmap | [hito/issue nuevo o modificado] | el roadmap del proyecto | Pendiente / Actualizado |
+| Arquitectura | [componente, flujo, contrato o dato] | el plano de arquitectura en `03-arquitectura/` | Pendiente / Actualizado |
+| Trazabilidad | [regla, test, métrica, alerta o runbook] | la matriz de trazabilidad del proyecto (si existe) | Pendiente / Actualizado |
 | Riesgos | [riesgo nuevo/cambiado] | `registro-riesgos.md` | Pendiente / Actualizado |
 | Pruebas | [tests requeridos] | `10-tests/` | Pendiente / Actualizado |
 | Operación | [alerta, backup, rollback o runbook] | `12-runbooks/` | Pendiente / Actualizado |

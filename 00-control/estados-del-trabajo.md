@@ -72,7 +72,7 @@ Estado de trabajo: PLANIFICADO
 Estado de evidencia: DISEÑADO
 Responsable: Luigi
 Siguiente acción: definir caso de prueba T-IA-003 en H4
-Fuente: PM-5, PM-7, inteligencia.md
+Fuente: inteligencia.md
 ```
 
 Ejemplo incorrecto:
@@ -318,7 +318,7 @@ LISTO → DESCUBRIMIENTO
 
 ```text
 LISTO: E0-01 — Crear estructura documental local.
-Fuentes: roadmap.md, inteligencia.md.
+Fuentes: el roadmap del proyecto, inteligencia.md.
 Criterio: árbol de carpetas creado y validado.
 ```
 
@@ -1021,8 +1021,8 @@ Estado de trabajo: ACEPTADO
 Estado de evidencia: DISEÑADO
 Resultado de prueba: NO APLICA
 Responsable: Luigi
-Dependencias: PM-0 a PM-8
-Fuente: roadmap.md
+Dependencias: hitos H0 a H8 del roadmap
+Fuente: el roadmap del proyecto
 Siguiente acción: crear estados-del-trabajo.md
 ```
 
@@ -1037,7 +1037,7 @@ Resultado de prueba: NO APLICA
 Responsable: Luigi
 Dependencias: H1 / E1-07
 Riesgos: R-005
-Fuente: inteligencia.md, roadmap.md, PM-2, PM-4, PM-7
+Fuente: inteligencia.md, el roadmap del proyecto
 Siguiente acción: definir máquina de estados y test concurrente.
 ```
 
@@ -1050,7 +1050,7 @@ Estado de trabajo: RECHAZADO
 Estado de evidencia: DISEÑADO
 Resultado de prueba: NO APLICA
 Responsable: Luigi
-Fuente: PM-1, PM-3, PM-8
+Fuente: fase H1 del roadmap (documentada en inteligencia.md)
 Siguiente acción: no reabrir hasta H8, consulta legal y gates aprobados.
 ```
 
@@ -1065,7 +1065,7 @@ Resultado de prueba: NO APLICA
 Responsable: Luigi
 Dependencias: H4 / E4-09
 Riesgos: R-007
-Fuente: PM-5, PM-7, roadmap.md
+Fuente: el roadmap del proyecto
 Siguiente acción: crear fixture de timeout y verificar no-consumo.
 ```
 
