@@ -1,6 +1,6 @@
 # Plan de Fixeo Documental — Vibe System v1.0.0 → v1.1.0
 
-> **Estado:** EN CIERRE (T-DOC-014 a T-DOC-017 completados; push y tag pendientes de confirmación de Luigi)  
+> **Estado:** COMPLETADO (las 18 tareas ejecutadas; push y tag confirmados por Luigi)  
 > **Tipo:** plan de remediación de hallazgos de la auditoría AUD-VS-001  
 > **Fuente de verdad:** Sí, para la secuencia de corrección de la documentación  
 > **Responsable:** Luigi  
@@ -9,7 +9,7 @@
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
 > **Relacionado con:** `11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md`, `01-requisitos/parametros-del-sistema.md`, `00-control/convenciones.md`  
-> **Repositorio destino:** `https://github.com/luiggiberaldi/vibe-system` (verificado: público y vacío)
+> **Repositorio destino:** `https://github.com/luiggiberaldi/vibe-system` (publicado; tag `v1.1.0` activo)
 
 ---
 
@@ -120,3 +120,4 @@ Pueden ejecutarse en una sola sesión larga si Luigi aprueba las decisiones de F
 | 2026-09-11 | Fase 2 ejecutada: T-DOC-006 (40 enlaces absolutos → relativos; 0 `file:///` restantes), T-DOC-008 (referencias colgantes generalizadas en 11 plantillas + agent.md + convenciones), T-DOC-009 (H0 normalizada como AUD-VS-000) | Buffy (agente IA) |
 | 2026-09-11 | Fase 3 ejecutada: T-DOC-010/011 (glosario → índice + 3 módulos, sin vocabulario de juego), T-DOC-012 (agent.md v1.1.0), T-DOC-013 (`bitacora-anexos/` con regla de rotación) | Buffy (agente IA) |
 | 2026-09-11 | Fase 4 ejecutada: T-DOC-014 a T-DOC-017 (tríada sincronizada, RSK-007/008, RELEASE-NOTES v1.1.0, AUD-VS-002 APROBADA con evidencia E1–E10). T-DOC-002/018 (push + tag) pendientes de confirmación humana | Buffy (agente IA) |
+| 2026-09-11 | Confirmación de Luigi: push inicial a `origin/main` ejecutado (T-DOC-002) y tag `v1.1.0` publicado (T-DOC-018). Plan COMPLETADO | Buffy (agente IA) |
