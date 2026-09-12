@@ -178,3 +178,4 @@ Un ecosistema metodológico autocontenido donde:
 | 1.0.0 | 2026-09-11 | Reescritura completa de inteligencia para Vibe System Core tras desacoplamiento de un proyecto de aplicación externo | Luigi / Antigravity |
 | 1.1.0 | 2026-09-11 | Sincronización post-fixeo: estado v1.1.0, ADR-004/005, hechos F-008/F-009, D-003 escalonada, repositorio GitHub | Buffy (agente IA) |
 | 1.2.0 | 2026-09-11 | Capa de verificación determinista: suite de gates G1–G12, plan de pruebas core (14/14 PASA), hechos F-010/F-011, corrección de ejemplo `T-` en convenciones | Buffy (agente IA) |
+| 1.3.0 | 2026-09-11 | Starter-kit heredable: plantillas `template-verify-gates.sh` (10 gates, validada en sandbox con pruebas negativas) y `template-plan-pruebas.md`; arranque de proyectos integrado (Paso 6 en guías, "16 carpetas" corregido) | Buffy (agente IA) |

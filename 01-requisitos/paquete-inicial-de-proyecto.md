@@ -44,11 +44,14 @@ Al crear un nuevo proyecto (cliente, personal o producto), se copia la siguiente
 ├── 04-ia/                                 (Prompts y adaptadores si aplican)
 ├── 05-ux/                                 (Flujos, interacción y diseño de pantallas)
 ├── 06-calidad/                            (Matrices de validación)
-├── 07-operacion/                          (Scripts y configuración)
+├── 07-operacion/
+│   └── verify-gates.sh                   (Suite de gates heredada del core, parametrizada al proyecto)
 ├── 08-legal-y-confianza/                  (Términos y privacidad)
 ├── 09-riesgos/                            (Registro de riesgos del proyecto)
 ├── 10-tests/
-│   └── template-tests.md                 (Plantilla de planes de prueba)
+│   ├── template-tests.md                 (Plantilla de planes de prueba de producto)
+│   ├── template-plan-pruebas.md          (Plantilla del plan de pruebas de gates, heredada del core)
+│   └── plan-pruebas.md                   (Plan de pruebas del proyecto, relleno en el Paso 6)
 ├── 11-auditorias/
 │   └── template-auditoria.md             (Plantilla de informe de auditoría)
 ├── 12-runbooks/
@@ -74,3 +77,5 @@ Para inicializar un proyecto nuevo, Luigi o la IA ejecutan los siguientes 5 paso
   Registrar la sesión fundacional con el formato estándar: objetivo, hecho, decisiones iniciales y siguiente paso.
 - [ ] **Paso 5: Git Init y Primer Commit**  
   Ejecutar `git init`, agregar un `.gitignore` apropiado (con `.env` bloqueado) y realizar el commit inicial de infraestructura documental.
+- [ ] **Paso 6: Configurar y validar la suite de gates**  
+  Editar los parámetros de `07-operacion/verify-gates.sh` (nombre del proyecto y prefijo de IDs), copiar `10-tests/template-plan-pruebas.md` como `10-tests/plan-pruebas.md`, ejecutar `bash 07-operacion/verify-gates.sh` y registrar la primera corrida verde (EXIT=0) en dicho plan. Este gate queda como obligatorio pre-push del proyecto.

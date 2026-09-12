@@ -140,11 +140,13 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 | **Protocolo Anti-Alucinaciones** | [`04-ia/protocolo-anti-alucinaciones.md`](04-ia/protocolo-anti-alucinaciones.md) | Disciplina de verificación determinista para agentes de IA |
 | **Guía de Arranque Rápido** | [`07-operacion/guia-de-arranque-de-nuevo-proyecto.md`](07-operacion/guia-de-arranque-de-nuevo-proyecto.md) | Procedimiento paso a paso para nuevo proyecto en 5 min |
 | **Suite de Verificación (Gates)** | [`07-operacion/verify-gates.sh`](07-operacion/verify-gates.sh) | 12 gates deterministas (EXIT=0 = íntegro) ejecutables antes de cada push |
+| **Plantilla de Gates (Derivados)** | [`07-operacion/template-verify-gates.sh`](07-operacion/template-verify-gates.sh) | Suite heredable parametrizable (10 gates) para proyectos derivados |
 | **Registro de Riesgos** | [`09-riesgos/registro-riesgos-vibe-system.md`](09-riesgos/registro-riesgos-vibe-system.md) | Matriz de riesgos metodológicos y mitigaciones |
 | **Auditoría Cierre H0** | [`11-auditorias/auditoria-H0-fundacion-vibe-system.md`](11-auditorias/auditoria-H0-fundacion-vibe-system.md) | Certificación formal de la base documental v1.0.0 |
 | **Auditoría de Coherencia** | [`11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md`](11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md) | Auditoría crítica de v1.0.0; base del plan de fixeo |
 | **Re-Certificación v1.1.0** | [`11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md`](11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md) | Verificación reproducible del cierre de hallazgos y dictamen APROBADA |
 | **Plan de Pruebas Core** | [`10-tests/plan-pruebas-vibe-system-core.md`](10-tests/plan-pruebas-vibe-system-core.md) | Casos, evidencia y bucle de mejora de los gates (14/14 PASA) |
+| **Plantilla Plan de Pruebas (Derivados)** | [`10-tests/template-plan-pruebas.md`](10-tests/template-plan-pruebas.md) | Plan heredable del proyecto derivado: 10 gates + 2 pruebas negativas |
 | **Release Notes v1.0.0** | [`14-entregas/RELEASE-NOTES-v1.0.0.md`](14-entregas/RELEASE-NOTES-v1.0.0.md) | Acta de lanzamiento oficial de Vibe System |
 | **Reglas de Trabajo para IA** | [`fuentes-principales/agent.md`](fuentes-principales/agent.md) | Protocolo y límites de autoridad para asistentes de IA |
 | **Memoria del Sistema** | [`fuentes-principales/inteligencia.md`](fuentes-principales/inteligencia.md) | Contexto curado, decisiones y hechos verificados |

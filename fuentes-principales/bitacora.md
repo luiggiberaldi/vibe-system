@@ -72,6 +72,32 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-11 — Starter-kit heredable: suite de gates y plan de pruebas para proyectos derivados
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: que todo proyecto derivado herede la verificación determinista (suite de gates + plan de pruebas) con sus propios parámetros e IDs.
+
+### Hecho
+- Creada `07-operacion/template-verify-gates.sh`: suite parametrizable de 10 gates (G1–G10) con 2 parámetros de arranque (`PROYECTO`, `PREFIJO`) y gate G7 propio de árbol Git limpio.
+- Validación end-to-end en sandbox de proyecto derivado: base 10/10 EXIT=0; enlace `file:///` plantado → EXIT=1 (G1+G7); residuo `T-GAME-999` en glosario → EXIT=1 (G2); restauración → EXIT=0.
+- La validación detectó 2 bugs de la plantilla antes de publicarla: falso positivo de G2 con un solo archivo de glosario (`grep -c` imprime `0` sin prefijo de archivo) y regex de secretos de G6 mal entrecomillado. Corregidos.
+- Creada `10-tests/template-plan-pruebas.md`: plan heredable (12 casos: 10 gates + 2 negativos) alineado 1:1 con la plantilla de suite.
+- Starter-kit actualizado: `paquete-inicial-de-proyecto.md` (árbol con suite, Paso 6) y `guia-de-arranque-de-nuevo-proyecto.md` (copiado de la suite, configuración, validación; "15 carpetas" corregido a 16).
+- Memoria sincronizada: README (2 plantillas nuevas), inteligencia v1.3.0, bitácora.
+
+### Decisiones
+- D-008: los proyectos derivados heredan la suite como `07-operacion/verify-gates.sh` (ya renombrada) y la configuran con 2 parámetros; el gate es obligatorio pre-push también en derivados.
+
+### Evidencia
+- Sandbox: EXIT=0 base, EXIT=1 en ambas pruebas negativas, EXIT=0 tras restaurar (2026-09-11).
+
+### Siguiente acción
+- Integrar `verify-gates.sh` del core en GitHub Actions (pendiente del paso equivalente en derivados).
+
+---
+
 ## 2026-09-11 — Capa de verificación determinista: suite de gates y plan de pruebas core
 
 - Estado de sesión: CERRADA
