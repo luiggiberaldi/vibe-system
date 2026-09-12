@@ -15,6 +15,8 @@
 
 Este runbook operativo permite a Luigi o a un equipo inicializar un **nuevo proyecto de software en menos de 5 minutos**, heredando toda la disciplina, memoria viva, plantillas y gobernanza de Vibe System sin fricción técnica.
 
+> **Alcance (Vía A):** esta guía cubre proyectos que **nacen desde cero**. Si el proyecto **ya existe** y se quiere gobernar con Vibe System (Vía B), NO arrancar aquí: primero [auditoría E2E del código heredado](../11-auditorias/template-auditoria-codigo-heredado.md) y luego [plan de adecuación](../01-requisitos/template-plan-adecuacion.md), conforme al [ciclo de vida](../01-requisitos/ciclo-de-vida-de-proyecto.md) §0-bis y su Etapa 0-B.
+
 ---
 
 ## 1. Procedimiento de Inicialización Paso a Paso

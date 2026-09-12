@@ -5,9 +5,9 @@
 > **Fuente de verdad:** Sí, para las etapas de maduración de cualquier proyecto  
 > **Responsable:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 1.0.0  
+> **Versión:** 2.0.0  
 > **Creado:** 2026-09-11  
-> **Última actualización:** 2026-09-11  
+> **Última actualización:** 2026-09-12  
 
 ---
 
@@ -17,10 +17,26 @@ Este documento describe las **etapas evolutivas de un proyecto** gobernado por V
 
 ---
 
+## 0-bis. Dos vías de incorporación
+
+Todo proyecto entra al sistema por una de dos vías:
+
+| | **Vía A — Proyecto desde cero** | **Vía B — Proyecto no creado por el sistema** |
+|---|---|---|
+| ¿Cuándo? | Nace dentro de Vibe System | Ya existe (propio previo, de terceros o generado fuera del sistema) |
+| Entrada | `init-vibe-project.sh` → Etapa 0 | **Auditoría E2E del código** → **Plan de adecuación** → Etapa 0-B |
+| Plantillas | — | [template-auditoria-codigo-heredado.md](../11-auditorias/template-auditoria-codigo-heredado.md), [template-plan-adecuacion.md](template-plan-adecuacion.md) |
+| Regla de oro | El diseño se resuelve antes de programar (Etapa 1) | **No se toca nada** hasta cerrar auditoría + plan aprobado |
+
+La Vía B existe porque el mayor riesgo de un proyecto heredado no es su código: es modificar sin entender. La auditoría produce la línea de base; el plan de adecuación la convierte en fases incrementales que nunca dejan al proyecto roto.
+
+---
+
 ## 1. Las 5 Etapas del Ciclo de Vida
 
 ```
-Etapa 0: Fundación ➔ Etapa 1: Arquitectura ➔ Etapa 2: Construcción ➔ Etapa 3: Hardening ➔ Etapa 4: Entrega
+Vía A:  Etapa 0: Fundación ➔ Etapa 1: Arquitectura ➔ Etapa 2: Construcción ➔ Etapa 3: Hardening ➔ Etapa 4: Entrega
+Vía B:  Auditoría E2E + Plan de Adecuación ➔ Etapa 0-B ➔ (se incorpora al ciclo según su madurez)
 ```
 
 ### Etapa 0: Fundación e Inicialización
@@ -32,6 +48,17 @@ Etapa 0: Fundación ➔ Etapa 1: Arquitectura ➔ Etapa 2: Construcción ➔ Eta
   - `fuentes-principales/bitacora.md` con la primera entrada de sesión.
   - `00-control/convenciones.md` configurado con nombres e IDs del proyecto.
 - **Gate de Salida:** Repositorio creado, Git inicializado, control documental validado.
+
+### Etapa 0-B: Incorporación de Proyecto Heredado (solo Vía B)
+- **Objetivo:** Dejar un proyecto existente gobernado por Vibe System sin romperlo en el intento.
+- **Precondición (bloqueante):** Auditoría E2E de código heredado APROBADA y plan de adecuación aprobado por Luigi.
+- **Entregables:**
+  - Informe de auditoría E2E en `11-auditorias/` (línea de base: inventario, capas, flujos críticos, hallazgos).
+  - Plan de adecuación en `01-requisitos/` con fases 0–4 y exclusiones temporales de gates justificadas.
+  - Críticos de la auditoría mitigados (secretos rotados, backups verificados) antes de cualquier refactor.
+  - Pruebas de regresión de flujos críticos activas en CI **antes** de refactorizar legado.
+  - Deuda heredada registrada como `RSK-` y hechos verificados como `F-` en la tríada.
+- **Gate de Salida:** Fases de adecuación cerradas, `verify-gates.sh` en verde (sin exclusiones vigentes o con plan de salida aprobado) y Luigi declara cerrada la Etapa 0-B. El proyecto se incorpora entonces al ciclo estándar en la etapa que le corresponda por su madurez.
 
 ### Etapa 1: Especificación y Arquitectura
 - **Objetivo:** Dejar resueltas todas las decisiones de diseño antes de programar.

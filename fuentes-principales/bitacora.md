@@ -72,6 +72,31 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-12 — Protocolos de incorporación: Vía A (desde cero) y Vía B (proyectos heredados)
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: definir protocolos explícitos para dos tipos de proyecto: los que nacen en el sistema y los que ya existen y se adoptan.
+
+### Hecho
+- Ciclo de vida v2.0.0: nueva sección §0-bis con las dos vías y nueva **Etapa 0-B** (Incorporación de Proyecto Heredado) con gate de salida propio.
+- Vía B obliga al orden: **auditoría E2E del código** (inventario, capas, flujos críticos, hallazgos; cero modificaciones durante la auditoría) → **plan de adecuación** (fases incrementales 0–4: contención, gobierno mínimo, red de seguridad, higiene, operación plena) → Etapa 0-B con gate.
+- Creada `11-auditorias/template-auditoria-codigo-heredado.md` (paso 1 de la Vía B).
+- Creada `01-requisitos/template-plan-adecuacion.md` (paso 2): fases, exclusiones temporales de gates con plan de salida, riesgos de la propia adecuación.
+- Starter-kit y guía de arranque marcados explícitamente como Vía A, con punteros a la Vía B.
+
+### Decisiones
+- D-010: en proyectos heredados, **no se modifica código** hasta cerrar la auditoría E2E y aprobar el plan de adecuación; las pruebas de regresión de flujos críticos preceden a cualquier refactor.
+
+### Evidencia
+- Ciclo de vida v2.0.0 con §0-bis y Etapa 0-B; 2 plantillas nuevas indexadas en README; gates del core en verde tras los cambios.
+
+### Siguiente acción
+- Aplicar la Vía B al primer proyecto heredado real (auditoría E2E como punto de partida).
+
+---
+
 ## 2026-09-12 — Automatización del arranque: init-vibe-project.sh + CI para derivados
 
 - Estado de sesión: CERRADA

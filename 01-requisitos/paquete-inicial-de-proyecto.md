@@ -15,6 +15,8 @@
 
 Este documento especifica los archivos y carpetas que conforman el **Starter Kit oficial de Vibe System**. Define qué debe copiarse para arrancar un proyecto nuevo desde cero y el checklist de configuración inicial para estar operando en menos de 10 minutos con orden absoluto.
 
+> **Vías de incorporación:** este paquete cubre la **Vía A (proyecto desde cero)**. Para adoptar un proyecto **no creado por el sistema** (Vía B), el orden obligatorio es: auditoría E2E del código ([template-auditoria-codigo-heredado](../11-auditorias/template-auditoria-codigo-heredado.md)) → plan de adecuación ([template-plan-adecuacion](template-plan-adecuacion.md)) → Etapa 0-B. Ver [ciclo-de-vida-de-proyecto.md](ciclo-de-vida-de-proyecto.md) §0-bis.
+
 ---
 
 ## 1. Contenido del Starter Kit
