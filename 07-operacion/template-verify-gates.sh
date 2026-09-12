@@ -78,5 +78,26 @@ N=$(grep -c -E "\`T-${PREFIJO}-" 00-control/convenciones.md 2>/dev/null)
 N=$(grep -c -i "$PROYECTO" fuentes-principales/inteligencia.md 2>/dev/null)
 [ "$N" -ge 1 ] && pass "G10 inteligencia.md registra el proyecto" || fail "G10 inteligencia.md sin mención del proyecto"
 
+# G11 — Resolvedor de enlaces: todo enlace .md relativo resuelve a un archivo existente
+BROKEN=""
+NCHECK=0
+while IFS= read -r f; do
+  dir=$(dirname "$f")
+  while IFS= read -r link; do
+    [ -z "$link" ] && continue
+    [[ "$link" =~ ^(https?:|file:|mailto:) ]] && continue
+    NCHECK=$((NCHECK+1))
+    if [ ! -f "$dir/$link" ]; then
+      BROKEN="$BROKEN
+  $f -> $link"
+    fi
+  done < <(grep -oE '\]\([^)h#][^)]*\.md[^)]*\)' "$f" 2>/dev/null | sed 's/](\(.*\))/\1/' | sed 's/#.*//')
+done < <(find . -name '*.md' -not -path './.freebuff/*' -not -path './node_modules/*')
+if [ -z "$BROKEN" ]; then
+  pass "G11 enlaces relativos .md resuelven ($NCHECK verificados)"
+else
+  fail "G11 enlaces .md rotos:$BROKEN"
+fi
+
 echo "== Resultado: $FAILS gate(s) fallidos (0 = sistema íntegro) =="
 exit $([ "$FAILS" -eq 0 ] && echo 0 || echo 1)

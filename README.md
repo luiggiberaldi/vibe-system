@@ -3,7 +3,7 @@
 > **Estado:** ACTIVO / BASE DEL SISTEMA  
 > **Propósito:** Definir los parámetros, reglas, flujo de ejecución y ciclo de actualización para construir cualquier producto digital asistido por IA con control total.  
 > **Autor y Responsable:** Luigi  
-> **Versión:** 1.6.0  
+> **Versión:** 1.7.0  
 > **Última actualización:** 2026-09-11  
 
 ---
@@ -139,7 +139,7 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 | **System Prompt Maestro** | [`04-ia/system-prompt-vibe-coder.md`](04-ia/system-prompt-vibe-coder.md) | Prompt de sistema reutilizable para Cursor, Claude, Antigravity |
 | **Protocolo Anti-Alucinaciones** | [`04-ia/protocolo-anti-alucinaciones.md`](04-ia/protocolo-anti-alucinaciones.md) | Disciplina de verificación determinista para agentes de IA |
 | **Guía de Arranque Rápido** | [`07-operacion/guia-de-arranque-de-nuevo-proyecto.md`](07-operacion/guia-de-arranque-de-nuevo-proyecto.md) | Procedimiento paso a paso para nuevo proyecto en 5 min |
-| **Suite de Verificación (Gates)** | [`07-operacion/verify-gates.sh`](07-operacion/verify-gates.sh) | 12 gates deterministas (EXIT=0 = íntegro); obligatorio pre-push y en CI |
+| **Suite de Verificación (Gates)** | [`07-operacion/verify-gates.sh`](07-operacion/verify-gates.sh) | 13 gates deterministas (EXIT=0 = íntegro; G13 resuelve enlaces .md); pre-push y CI |
 | **Workflow CI de Gates** | [`.github/workflows/verify-gates.yml`](.github/workflows/verify-gates.yml) | GitHub Actions: ejecuta la suite en cada push a `main` y en PRs |
 | **Plantilla de Gates (Derivados)** | [`07-operacion/template-verify-gates.sh`](07-operacion/template-verify-gates.sh) | Suite heredable parametrizable (10 gates) para proyectos derivados |
 | **Inicializador de Proyectos** | [`07-operacion/init-vibe-project.sh`](07-operacion/init-vibe-project.sh) | Arranque de un proyecto derivado con un solo comando: árbol, tríada, gates, CI y commit |

@@ -84,5 +84,26 @@ N=$(grep -c -E 'ADR-004-limites-escalonados|AUD-VS-002-recertificacion' README.m
 N=$(grep -c 'AUD-VS-002' fuentes-principales/inteligencia.md 2>/dev/null)
 [ "$N" -ge 1 ] && pass "G12 inteligencia.md refleja AUD-VS-002" || fail "G12 inteligencia.md desactualizada"
 
+# G13 — Resolvedor de enlaces: todo enlace .md relativo resuelve a un archivo existente
+BROKEN=""
+NCHECK=0
+while IFS= read -r f; do
+  dir=$(dirname "$f")
+  while IFS= read -r link; do
+    [ -z "$link" ] && continue
+    [[ "$link" =~ ^(https?:|file:|mailto:) ]] && continue
+    NCHECK=$((NCHECK+1))
+    if [ ! -f "$dir/$link" ]; then
+      BROKEN="$BROKEN
+  $f -> $link"
+    fi
+  done < <(grep -oE '\]\([^)h#][^)]*\.md[^)]*\)' "$f" 2>/dev/null | sed 's/](\(.*\))/\1/' | sed 's/#.*//')
+done < <(find . -name '*.md' -not -path './.freebuff/*' -not -path './node_modules/*')
+if [ -z "$BROKEN" ]; then
+  pass "G13 enlaces relativos .md resuelven ($NCHECK verificados)"
+else
+  fail "G13 enlaces .md rotos:$BROKEN"
+fi
+
 echo "== Resultado: $FAILS gate(s) fallidos (0 = sistema íntegro) =="
 exit $([ "$FAILS" -eq 0 ] && echo 0 || echo 1)

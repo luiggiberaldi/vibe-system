@@ -5,7 +5,7 @@
 > **Fuente de verdad:** No; resume y enlaza a las fuentes de autoridad  
 > **Responsable:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 1.6.0  
+> **Versión:** 1.7.0  
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
 > **Próxima revisión:** al iniciar H1  
@@ -182,3 +182,4 @@ Un ecosistema metodológico autocontenido donde:
 | 1.4.0 | 2026-09-12 | Automatización del arranque: `init-vibe-project.sh` (un comando: árbol con anclas, tríada y control sembrados, gates + CI instalados, commit y validación EXIT=0); `template-ci-verify-gates.yml` para derivados; validación end-to-end en sandbox con prueba negativa | Buffy (agente IA) |
 | 1.5.0 | 2026-09-12 | Protocolos de incorporación por vía: Vía A (desde cero, existente) y Vía B (proyectos no creados por el sistema: auditoría E2E obligatoria → plan de adecuación → Etapa 0-B); ciclo de vida v2.0.0 con §0-bis y Etapa 0-B | Buffy (agente IA) |
 | 1.6.0 | 2026-09-12 | Tests E2E deterministas de las dos vías: `10-tests/test-vias-incorporacion.sh` (20 tests: TVA-001..010 + TVB-001..010), 20/20 PASA idempotente, integrado al workflow de CI | Buffy (agente IA) |
+| 1.7.0 | 2026-09-12 | Gate G13 resolvedor de enlaces (72 enlaces .md relativos verificados; negativa validada); heredado a derivados como G11; cabeceras de tríada a 1.7.0 | Buffy (agente IA) |

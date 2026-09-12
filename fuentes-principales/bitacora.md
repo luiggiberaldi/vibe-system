@@ -72,6 +72,32 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-12 — Gate G13 resolvedor de enlaces (core G13 / derivados G11)
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: convertir el chequeo manual de enlaces del informe de cableado en un gate permanente, en el core y en derivados.
+
+### Hecho
+- Gate **G13** en `07-operacion/verify-gates.sh`: recorre cada `.md` del core, extrae cada enlace relativo `.md`, resuelve la ruta contra el directorio del emisor y falla si el destino no existe (72 enlaces verificados, 0 rotos).
+- Ignora esquemas externos (`http:`, `https:`, `file:`, `mailto:`) y anclas `#`.
+- Validación negativa: enlace roto plantado en README → `[FAIL] G13` con archivo y destino exactos → EXIT=1; restauración → EXIT=0.
+- Heredado a la plantilla de derivados como **G11**; validada en sandbox: 11/11 PASS, negativa → EXIT=1.
+- 1 bug del gate corregido antes de publicar (patrón `case` con comilla que rompía el parseo; sustituido por `[[ =~ ]]`).
+- README/plan de pruebas actualizados (13 gates, 16 casos); cabeceras de tríada a 1.7.0 (coherentes con historiales).
+
+### Decisiones
+- Ninguna nueva (operacionaliza el informe de cableado; G13 = chequeo 2 del informe hecho permanente).
+
+### Evidencia
+- Core: 13/13 PASS EXIT=0; negativa EXIT=1. Plantilla derivados: 11/11 PASS; negativa EXIT=1 (2026-09-12).
+
+### Siguiente acción
+- Confirmar run de CI en verde con G13 incluido.
+
+---
+
 ## 2026-09-12 — Corrección de los 4 defectos de cableado detectados por la auditoría
 
 - Estado de sesión: CERRADA

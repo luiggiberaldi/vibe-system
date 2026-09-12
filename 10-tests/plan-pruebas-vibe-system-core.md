@@ -104,6 +104,8 @@ La suite ejecuta los gates G1–G12 (ver `07-operacion/verify-gates.sh` para el 
 | T-VS-010 | PAR-04 remite a estados-del-trabajo.md | G10 | `[PASS]` | Salida de suite 2026-09-11 | PASA |
 | T-VS-011 | README indexa ADR-004 y AUD-VS-002 | G11 | `[PASS]` | Salida de suite 2026-09-11 | PASA |
 | T-VS-012 | inteligencia.md refleja AUD-VS-002 | G12 | `[PASS]` | Salida de suite 2026-09-11 | PASA |
+| T-VS-015 | Resolvedor: todo enlace .md relativo resuelve | G13 | `[PASS]` (72 verificados) | Salida de suite 2026-09-12 | PASA |
+| T-VS-016 | Negativa: enlace roto plantado dispara G13 | — | `[FAIL]` + EXIT=1 | Ejecución 2026-09-12 | PASA |
 | T-VS-013 | Negativa: enlace `file:///` plantado dispara G1 | — | `[FAIL]` + EXIT=1 | Ejecución 2026-09-11 | PASA |
 | T-VS-014 | Negativa: residuo `T-GAME-999` plantado dispara G2+G5 | — | `[FAIL]` + EXIT=1 | Ejecución 2026-09-11 | PASA |
 
@@ -203,7 +205,7 @@ Aplicables al ámbito documental (los grupos de IA/privacidad/juego de la planti
 
 ### Siguiente paso único
 
-Integrar `verify-gates.sh` en GitHub Actions para que el gate se ejecute automáticamente en cada push a `main`.
+Integrar `verify-gates.sh` en GitHub Actions para que el gate se ejecute automáticamente en cada push a `main`. *(Hecho 2026-09-11; el CI ejecuta además los tests de vías.)*
 
 ---
 
