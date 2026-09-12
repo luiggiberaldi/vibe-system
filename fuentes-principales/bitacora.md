@@ -72,6 +72,32 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-12 — Tests deterministas de las dos vías de incorporación (20/20)
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: verificar de forma determinista y repetible que las dos vías de incorporación funcionan de punta a punta.
+
+### Hecho
+- Creada `10-tests/test-vias-incorporacion.sh`: 20 tests E2E en sandbox temporal (autolimpiable) con códigos de salida.
+- **Vía A (TVA-001..010):** sintaxis del init, presencia de las 5 plantillas, init con prefijo explícito y automático, estructura 16 carpetas + tríada + CI + `.env` bloqueado + commit fundacional, propagación de parámetros, gates del derivado en verde, guarda de destino no vacío, negativa (violación plantada → EXIT=1) y restauración.
+- **Vía B (TVB-001..010):** estructura completa de la plantilla de auditoría (inventario, capas, hallazgos, flujos, regla cero-modificaciones), plan de adecuación con fases 0–4 + exclusiones + RSK-A01, §0-bis y Etapa 0-B en el ciclo de vida, techo ≤600 de las 3 piezas, orden audit→plan codificado por referencias cruzadas, descubribilidad en README, detección de secreto heredado en código, migración real de código legado al árbol Vibe con gates en verde, negativa (secreto en .md → EXIT=1) y restauración.
+- 1ª corrida: 19/20 — el fallo fue del test (cadena "no creados" vs "no creado"); corregido el test, no el documento.
+- Integrado al workflow de CI (`.github/workflows/verify-gates.yml`) como paso adicional tras los gates.
+- Registrado en el plan de pruebas core (secciones 3 y 7).
+
+### Decisiones
+- Ninguna nueva (operacionaliza el §0-bis del ciclo de vida y D-010).
+
+### Evidencia
+- 2 corridas consecutivas 20/20 PASA, EXIT=0, idempotente; árbol del core limpio tras los tests (2026-09-12).
+
+### Siguiente acción
+- Confirmar el run de CI en verde con el paso nuevo incluido.
+
+---
+
 ## 2026-09-12 — Protocolos de incorporación: Vía A (desde cero) y Vía B (proyectos heredados)
 
 - Estado de sesión: CERRADA

@@ -60,6 +60,7 @@ Evita repetir el fallo raíz detectado en AUD-VS-001: **gates declarados "verifi
 | Regresión | Cada hallazgo de AUD-VS-001 tiene su gate permanente |
 | Seguridad | G9 (secretos evidentes) |
 | Manual guiada | Render de enlaces relativos en GitHub (única vez, AUD-VS-002) |
+| E2E | `10-tests/test-vias-incorporacion.sh`: las dos vías de incorporación de punta a punta (init real de proyectos en sandbox, migración de legado, guardas y negativas) |
 
 ---
 
@@ -153,6 +154,7 @@ Aplicables al ámbito documental (los grupos de IA/privacidad/juego de la planti
 | Fecha | Ambiente | Casos ejecutados | Pasan | Fallan | Bloqueados | Responsable |
 |---|---|---:|---:|---:|---:|---|
 | 2026-09-11 | Local (Git Bash) | 14 (12 gates + 2 negativas) | 14 | 0 | 0 | Buffy (agente) |
+| 2026-09-12 | Local (Git Bash) | 20 (`test-vias-incorporacion.sh`: 10 Vía A + 10 Vía B) | 20 | 0 | 0 | Buffy (agente) |
 
 ### Fallos encontrados durante la primera ejecución (valor del sistema)
 

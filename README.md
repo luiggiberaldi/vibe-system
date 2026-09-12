@@ -150,6 +150,7 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 | **Auditoría de Coherencia** | [`11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md`](11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md) | Auditoría crítica de v1.0.0; base del plan de fixeo |
 | **Re-Certificación v1.1.0** | [`11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md`](11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md) | Verificación reproducible del cierre de hallazgos y dictamen APROBADA |
 | **Plan de Pruebas Core** | [`10-tests/plan-pruebas-vibe-system-core.md`](10-tests/plan-pruebas-vibe-system-core.md) | Casos, evidencia y bucle de mejora de los gates (14/14 PASA) |
+| **Tests de las Dos Vías** | [`10-tests/test-vias-incorporacion.sh`](10-tests/test-vias-incorporacion.sh) | 20 tests E2E deterministas: Vía A (desde cero) y Vía B (heredados), idempotente |
 | **Plantilla Plan de Pruebas (Derivados)** | [`10-tests/template-plan-pruebas.md`](10-tests/template-plan-pruebas.md) | Plan heredable del proyecto derivado: 10 gates + 2 pruebas negativas |
 | **Release Notes v1.0.0** | [`14-entregas/RELEASE-NOTES-v1.0.0.md`](14-entregas/RELEASE-NOTES-v1.0.0.md) | Acta de lanzamiento oficial de Vibe System |
 | **Reglas de Trabajo para IA** | [`fuentes-principales/agent.md`](fuentes-principales/agent.md) | Protocolo y límites de autoridad para asistentes de IA |
