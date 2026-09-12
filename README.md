@@ -3,7 +3,7 @@
 > **Estado:** ACTIVO / BASE DEL SISTEMA  
 > **Propósito:** Definir los parámetros, reglas, flujo de ejecución y ciclo de actualización para construir cualquier producto digital asistido por IA con control total.  
 > **Autor y Responsable:** Luigi  
-> **Versión:** 1.1.0  
+> **Versión:** 1.6.0  
 > **Última actualización:** 2026-09-11  
 
 ---

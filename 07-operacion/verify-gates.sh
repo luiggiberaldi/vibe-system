@@ -33,13 +33,29 @@ N=$(grep -rlE 'planmaestro\.md|`arquitectura\.md`|matriz-trazabilidad\.md' --inc
 N=$(grep -rlE 'T-GAME-[0-9]|(^|[^A-Z-])PM-[0-9]' --include='*.md' 00-control 01-requisitos README.md 2>/dev/null | grep -vE 'plan-de-fixeo|estados-del-trabajo\.md|glosario-operacion\.md' | wc -l)
 [ "$N" -eq 0 ] && pass "G5 sin IDs colgantes PM-*/T-GAME-* en control y requisitos" || fail "G5 documentos con IDs colgantes = $N"
 
-# G6 — Normativos nuevos dentro del techo por archivo (ADR-004: ≤600 líneas c/u)
+# G6 — Normativos dentro del techo por archivo (ADR-004: ≤600 líneas c/u).
+# Exenciones permanentes (deuda documental registrada en AUD-VS-001, pendiente ADR de refactor):
+# convenciones/DoR/DoD/estados son heredados de v1.0.0; se regulan pero no bloquean el gate.
 BAD=""
-for f in 00-control/glosario*.md 07-operacion/verify-gates.sh; do
+EXC="00-control/convenciones.md 00-control/definition-of-done.md 00-control/definition-of-ready.md 00-control/estados-del-trabajo.md"
+for f in 00-control/glosario*.md 00-control/template-*.md 00-control/pre-commit-gate-checklist.md \
+         01-requisitos/*.md 02-decisiones/ADR-*.md fuentes-principales/agent.md \
+         07-operacion/verify-gates.sh 07-operacion/template-verify-gates.sh \
+         07-operacion/init-vibe-project.sh 10-tests/template-*.md \
+         11-auditorias/template-*.md 12-runbooks/template-runbook.md \
+         .github/workflows/verify-gates.yml; do
+  [ -f "$f" ] || continue
   L=$(wc -l < "$f" 2>/dev/null || echo 0)
   if [ "$L" -gt 600 ]; then BAD="$BAD $f($L)"; fi
 done
-[ -z "$BAD" ] && pass "G6 normativos nuevos dentro del techo (≤600 por archivo)" || fail "G6 sobre techo:$BAD"
+[ -z "$BAD" ] && pass "G6 normativos dentro del techo (≤600 por archivo)" || fail "G6 sobre techo:$BAD"
+# Sub-gate informativo: deuda heredada visible sin romper el build
+DEU=""
+for f in $EXC; do
+  L=$(wc -l < "$f" 2>/dev/null || echo 0)
+  [ "$L" -gt 600 ] && DEU="$DEU $f($L)"
+done
+[ -n "$DEU" ] && printf '  [WARN] deuda heredada sobre techo (no bloquea):%s\n' "$DEU"
 
 # G7 — ADR-004 y ADR-005 aceptadas
 N=$(grep -l '^> \*\*Estado:\*\* ACEPTADA' 02-decisiones/ADR-004-*.md 02-decisiones/ADR-005-*.md 2>/dev/null | wc -l)

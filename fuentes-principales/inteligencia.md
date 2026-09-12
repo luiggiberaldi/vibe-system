@@ -5,7 +5,7 @@
 > **Fuente de verdad:** No; resume y enlaza a las fuentes de autoridad  
 > **Responsable:** Luigi  
 > **Clasificación:** INTERNA  
-> **Versión:** 1.1.0  
+> **Versión:** 1.6.0  
 > **Creado:** 2026-09-11  
 > **Última actualización:** 2026-09-11  
 > **Próxima revisión:** al iniciar H1  

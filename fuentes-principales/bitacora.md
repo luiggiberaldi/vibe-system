@@ -72,6 +72,31 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-12 — Corrección de los 4 defectos de cableado detectados por la auditoría
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: corregir los hallazgos del informe de cableado inteligente (enlaces, versiones, trazabilidad, cobertura de gates).
+
+### Hecho
+- **Enlaces rotos corregidos (2):** `template-auditoria-codigo-heredado.md` → `../01-requisitos/template-plan-adecuacion.md` (×2) y `RELEASE-NOTES-v1.1.0.md` → `../11-auditorias/AUD-VS-002...`.
+- **Cabeceras de versión sincronizadas (3):** README, `agent.md` e `inteligencia.md` de 1.1.0 → 1.6.0, alineadas con sus historiales de cambios.
+- **Trazabilidad D-002/D-005 restaurada:** entradas añadidas a las sesiones correspondientes de la bitácora (2026-09-10 ideación; sesión de consolidación v1.0.0). La bitácora ahora registra D-001…D-010 completa.
+- **G6 ampliado:** ahora vigila el techo ≤600 en TODOS los normativos del core (convenciones, plantillas de control, requisitos, ADRs, tríada, scripts operativos, plantillas de tests/auditorías/runbooks, workflow CI).
+- Hallazgo colateral del G6 ampliado: 4 documentos heredados de v1.0.0 están sobre techo (convenciones 821, DoR 706, DoD 674, estados 1.114). Quedaron como **exenciones con [WARN] informativo** (no bloquean el build) y deuda documental pendiente de un ADR de refactor.
+
+### Decisiones
+- D-011: los 4 documentos heredados sobre techo quedan como deuda documental EXCEPTUADA del gate G6 (WARN visible, no bloqueante); su refactor requiere ADR propio por el riesgo de romper referencias consolidadas.
+
+### Evidencia
+- Gates 12/12 PASS + 1 WARN informativo, EXIT=0; tests de vías 20/20, EXIT=0; 0 enlaces rotos en todo el core; bitácora con D-001…D-010 (2026-09-12).
+
+### Siguiente acción
+- ADR de refactor de los 4 documentos heredados sobre techo (opcional, prioridad baja).
+
+---
+
 ## 2026-09-12 — Tests deterministas de las dos vías de incorporación (20/20)
 
 - Estado de sesión: CERRADA
@@ -308,6 +333,7 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 - Verificación de limpieza léxica en documentos de control (`00-control/`).
 
 ### Decisiones
+- D-005: DoD obligatorio antes de dar por cerrada cualquier tarea (calidad verificada con pruebas y documentación actualizada).
 - D-006: `sistema de proyectos` se reserva exclusivamente como el estándar maestro y documentación de Vibe System.
 - Preservación 100% íntegra de la propiedad intelectual y diseño de un proyecto de aplicación externo en su carpeta dedicada.
 
@@ -330,5 +356,6 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ### Decisiones
 - D-001: Formato Markdown versionado como estándar universal.
+- D-002: Tríada obligatoria de memoria en `fuentes-principales/` (contexto claro, reglas firmes e historial sin desbordamiento).
 - D-003: Techo orientativo de ~600 líneas por documento operativo.
 - D-004: DoR obligatorio antes de escribir código.

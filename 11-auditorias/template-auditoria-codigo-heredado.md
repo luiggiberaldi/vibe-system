@@ -13,7 +13,7 @@
 
 ## 0. Para qué sirve esta plantilla
 
-Es el **primer paso obligatorio** cuando Vibe System adopta un proyecto que ya existe (código propio previo, de un tercero, o generado fuera del sistema). No se toca nada hasta que esta auditoría produce el inventario y el diagnóstico de línea de base. Su producto alimenta directamente el [plan de adecuación](template-plan-adecuacion.md).
+Es el **primer paso obligatorio** cuando Vibe System adopta un proyecto que ya existe (código propio previo, de un tercero, o generado fuera del sistema). No se toca nada hasta que esta auditoría produce el inventario y el diagnóstico de línea de base. Su producto alimenta directamente el [plan de adecuación](../01-requisitos/template-plan-adecuacion.md).
 
 > **Regla central:** no se adecúa lo que no se conoce. Ningún cambio de código antes de completar esta auditoría y aprobar el plan de adecuación.
 
@@ -113,7 +113,7 @@ Un flujo por fila; es la base de las pruebas de regresión del plan de adecuaci�
 
 ### Siguiente paso único
 
-Elaborar el [plan de adecuación](template-plan-adecuacion.md) con estos hallazgos como línea de base.
+Elaborar el [plan de adecuación](../01-requisitos/template-plan-adecuacion.md) con estos hallazgos como línea de base.
 
 ---
 

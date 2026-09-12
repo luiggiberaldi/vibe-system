@@ -4,7 +4,7 @@
 > **Fecha de Lanzamiento:** 2026-09-11  
 > **Autor:** Luigi  
 > **Estado:** LANZAMIENTO OFICIAL  
-> **Auditoría de re-certificación:** [`11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md`](AUD-VS-002-recertificacion-v1-1-0.md)
+> **Auditoría de re-certificación:** [`11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md`](../11-auditorias/AUD-VS-002-recertificacion-v1-1-0.md)
 
 ---
 
