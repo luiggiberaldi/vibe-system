@@ -139,7 +139,8 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 | **System Prompt Maestro** | [`04-ia/system-prompt-vibe-coder.md`](04-ia/system-prompt-vibe-coder.md) | Prompt de sistema reutilizable para Cursor, Claude, Antigravity |
 | **Protocolo Anti-Alucinaciones** | [`04-ia/protocolo-anti-alucinaciones.md`](04-ia/protocolo-anti-alucinaciones.md) | Disciplina de verificación determinista para agentes de IA |
 | **Guía de Arranque Rápido** | [`07-operacion/guia-de-arranque-de-nuevo-proyecto.md`](07-operacion/guia-de-arranque-de-nuevo-proyecto.md) | Procedimiento paso a paso para nuevo proyecto en 5 min |
-| **Suite de Verificación (Gates)** | [`07-operacion/verify-gates.sh`](07-operacion/verify-gates.sh) | 12 gates deterministas (EXIT=0 = íntegro) ejecutables antes de cada push |
+| **Suite de Verificación (Gates)** | [`07-operacion/verify-gates.sh`](07-operacion/verify-gates.sh) | 12 gates deterministas (EXIT=0 = íntegro); obligatorio pre-push y en CI |
+| **Workflow CI de Gates** | [`.github/workflows/verify-gates.yml`](.github/workflows/verify-gates.yml) | GitHub Actions: ejecuta la suite en cada push a `main` y en PRs |
 | **Plantilla de Gates (Derivados)** | [`07-operacion/template-verify-gates.sh`](07-operacion/template-verify-gates.sh) | Suite heredable parametrizable (10 gates) para proyectos derivados |
 | **Registro de Riesgos** | [`09-riesgos/registro-riesgos-vibe-system.md`](09-riesgos/registro-riesgos-vibe-system.md) | Matriz de riesgos metodológicos y mitigaciones |
 | **Auditoría Cierre H0** | [`11-auditorias/auditoria-H0-fundacion-vibe-system.md`](11-auditorias/auditoria-H0-fundacion-vibe-system.md) | Certificación formal de la base documental v1.0.0 |

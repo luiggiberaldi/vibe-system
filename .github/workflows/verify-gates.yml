@@ -1,0 +1,37 @@
+# Workflow: Verify Gates — Vibe System Core
+# Ejecuta la suite de verificación determinista en cada push a main y en PRs.
+# EXIT=0 (12/12 PASS) = sistema íntegro; cualquier FAIL rompe el build.
+# Referencias: 07-operacion/verify-gates.sh · 10-tests/plan-pruebas-vibe-system-core.md · decisión D-007
+
+name: Verify Gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-gates:
+    name: Gates documentales (bash)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ejecutar suite de verificación determinista
+        run: |
+          bash 07-operacion/verify-gates.sh
+
+      - name: Resumen en GitHub Actions
+        if: always()
+        run: |
+          if bash 07-operacion/verify-gates.sh >> "$GITHUB_STEP_SUMMARY" 2>&1; then
+            echo "✅ **Gates 12/12 PASS — sistema íntegro**" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "❌ **Gates en rojo — revisar los [FAIL] del paso anterior**" >> "$GITHUB_STEP_SUMMARY"
+          fi

@@ -72,6 +72,29 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-11 — Integración de la suite de gates en GitHub Actions
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: ejecutar el gate determinista automáticamente en cada push a `main` y en PRs, cerrando la acción pendiente de la capa de verificación.
+
+### Hecho
+- Creado `.github/workflows/verify-gates.yml`: checkout + `bash 07-operacion/verify-gates.sh` en `ubuntu-latest`, disparado por push a `main`, PRs a `main` y ejecución manual (`workflow_dispatch`); permisos mínimos de solo lectura.
+- Resumen del resultado en `$GITHUB_STEP_SUMMARY` (verde 12/12 o rojo con puntero a los FAIL).
+- Índice del README actualizado con el workflow.
+
+### Decisiones
+- Ninguna nueva (operacionaliza D-007: el gate pasa de ser "pre-push manual" a "obligatorio en CI").
+
+### Evidencia
+- Validación YAML local no disponible (sin parser en el equipo); la validación definitiva ocurrirá al primer push (GitHub parsea el workflow). El script ejecutado es el mismo validado en local (12/12, EXIT=0).
+
+### Siguiente acción
+- Primer push que active el workflow y confirmar el run verde en la pestaña Actions.
+
+---
+
 ## 2026-09-11 — Starter-kit heredable: suite de gates y plan de pruebas para proyectos derivados
 
 - Estado de sesión: CERRADA
