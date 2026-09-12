@@ -186,7 +186,7 @@ En proyectos derivados se añaden: `planmaestro.md`, `arquitectura.md`, `roadmap
 | Incidente | `INC-` | `INC-001` | Evento operativo o de seguridad |
 | Regla de UX | `UXR-` | `UXR-003` | Principio/requisito de experiencia |
 | Evento de analítica | `EVT-` | `EVT-007` | Evento de producto/operación |
-| Test general | `T-` | `T-GAME-003` | Prueba individual |
+| Test general | `T-` | `T-001` | Prueba individual |
 | Simulacro | `S-` | `S-004` | Simulación operativa o de incidente |
 | Métrica | `M-` | `M-006` | Indicador de producto/sistema |
 | Alerta | `AL-` | `AL-003` | Alerta operacional |

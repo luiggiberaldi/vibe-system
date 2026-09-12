@@ -72,6 +72,33 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-11 — Capa de verificación determinista: suite de gates y plan de pruebas core
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: convertir la evidencia de AUD-VS-002 en una suite reproducible (EXIT=0/1) que permita saber en cualquier momento si el sistema tiene fallas, si el flujo es correcto y si deja todo documentado para mejorar.
+
+### Hecho
+- Creada la suite de verificación determinista `07-operacion/verify-gates.sh` con 12 gates (G1–G12): enlaces absolutos, residuo de juego, topología 16 carpetas, referencias colgantes, techos por archivo (ADR-004), ADRs aceptadas, secretos, coherencia de memoria.
+- Primera ejecución: 10/12 PASS → detectó 2 defectos reales. Corregidos: ejemplo `T-GAME-003` residual en `convenciones.md` (→ `T-001`) y lógica del propio gate G6 (verificación por archivo, no suma total).
+- Pruebas negativas T-VS-013/014: violaciones plantadas (`file:///`, `T-GAME-999`) producen FAIL + EXIT=1; repositorio restaurado a verde.
+- La suite descubrió en su 2ª corrida un defecto real de la entrega publicada: `05-ux/`, `06-calidad/` y `08-legal-y-confianza/` no estaban en Git/GitHub (carpetas vacías no trackeadas) → G8 fallaba con 13/16. Añadidos READMEs ancla y commit.
+- Creado el plan de pruebas formal `10-tests/plan-pruebas-vibe-system-core.md` (14/14 PASA) con fallos, regresiones y bucle de mejora documentados.
+- Memoria sincronizada: README (suite + plan de pruebas), `inteligencia.md` (F-010, F-011, v1.2.0), `registro-riesgos` (RSK-007 con mitigación con evidencia).
+
+### Decisiones
+- D-007: la suite `verify-gates.sh` es el gate obligatorio pre-push del core; reemplaza la verificación declarativa de auditorías (mitiga RSK-007 con evidencia ejecutable).
+
+### Evidencia
+- `bash 07-operacion/verify-gates.sh` → 12/12 PASS, EXIT=0 (2026-09-11).
+- Detalle completo en `10-tests/plan-pruebas-vibe-system-core.md` §7.
+
+### Siguiente acción
+- Integrar la suite en GitHub Actions (gate automático en cada push a `main`).
+
+---
+
 ## 2026-09-11 — Fixeo documental completo: AUD-VS-001 → v1.1.0 (Fases 0–4)
 
 - Estado de sesión: CERRADA (pendiente confirmación humana de push y tag)

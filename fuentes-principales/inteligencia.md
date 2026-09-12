@@ -126,6 +126,8 @@ Un ecosistema metodológico autocontenido donde:
 | F-007 | HECHO_VERIFICADO | Vibe System v1.0.0 cuenta con auditoría formal de cierre H0 aprobada sin reservas | `auditoria-H0-fundacion-vibe-system.md` | 2026-09-11 | Alta | CERRADO |
 | F-008 | HECHO_VERIFICADO | Los 8 hallazgos de AUD-VS-001 fueron remediados por el plan de fixeo y verificados por AUD-VS-002 | `AUD-VS-002` y commits Git | 2026-09-11 | Alta | ACTIVO |
 | F-009 | HECHO_VERIFICADO | El sistema cuenta con repositorio Git local y remote `origin` en GitHub | `https://github.com/luiggiberaldi/vibe-system` | 2026-09-11 | Alta | ACTIVO |
+| F-010 | HECHO_VERIFICADO | Los gates documentales son ejecutables de forma determinista: `bash 07-operacion/verify-gates.sh` (12 gates, EXIT=0 = íntegro; violaciones plantadas producen EXIT=1) | `07-operacion/verify-gates.sh` + `10-tests/plan-pruebas-vibe-system-core.md` | 2026-09-11 | Alta | ACTIVO |
+| F-011 | HECHO_VERIFICADO | Las carpetas vacías no se versionan en Git: `05-ux/`, `06-calidad/` y `08-legal-y-confianza/` no llegaron al remoto en v1.1.0 y fueron detectadas por el gate G8 | G8 / salida de suite 2026-09-11 | 2026-09-11 | Alta | ACTIVO |
 
 ---
 
@@ -175,3 +177,4 @@ Un ecosistema metodológico autocontenido donde:
 |---|---|---|---|
 | 1.0.0 | 2026-09-11 | Reescritura completa de inteligencia para Vibe System Core tras desacoplamiento de un proyecto de aplicación externo | Luigi / Antigravity |
 | 1.1.0 | 2026-09-11 | Sincronización post-fixeo: estado v1.1.0, ADR-004/005, hechos F-008/F-009, D-003 escalonada, repositorio GitHub | Buffy (agente IA) |
+| 1.2.0 | 2026-09-11 | Capa de verificación determinista: suite de gates G1–G12, plan de pruebas core (14/14 PASA), hechos F-010/F-011, corrección de ejemplo `T-` en convenciones | Buffy (agente IA) |

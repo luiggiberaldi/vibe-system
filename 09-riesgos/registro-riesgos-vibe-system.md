@@ -27,7 +27,7 @@ Este documento identifica y gestiona los **riesgos metodológicos, técnicos y h
 | **RSK-004** | Fuga accidental de llaves API o secretos en repositorio | Baja | Crítico | **ALTA** | MITIGADO | Pre-commit gate checklist, `.gitignore` estricto y escaneo previo a commit. |
 | **RSK-005** | Desincronización entre plantillas maestras y proyectos derivados | Media | Medio | **MEDIA** | MITIGADO | Protocolo formal de sincronización upstream en `mecanismo-de-actualizacion.md`. |
 | **RSK-006** | Dependencia o bloqueo de un único proveedor de LLM | Baja | Medio | **BAJA** | MITIGADO | Agnóstico al modelo; prompts en Markdown compatibles con cualquier LLM. |
-| **RSK-007** | Gates no verificables de forma reproducible (evidencia declarada pero no reproducible) | Alta | Alto | **ALTA** | MITIGADO | Verificación con comandos reproducibles (`wc -l`, `grep`) documentada en cada auditoría; AUD-VS-002 verifica con evidencia. |
+| **RSK-007** | Gates no verificables de forma reproducible (evidencia declarada pero no reproducible) | Alta | Alto | **ALTA** | MITIGADO | Suite determinista ejecutable: `bash 07-operacion/verify-gates.sh` (12 gates, EXIT=0/1) + plan de pruebas con validación negativa (`10-tests/plan-pruebas-vibe-system-core.md`); próxima fase: CI en cada push. |
 | **RSK-008** | Pérdida de historial por ausencia de control de versiones | Media | Alto | **ALTA** | MITIGADO | Repositorio Git inicializado con remote GitHub; commit base y tags por release (ADR-001). |
 
 ---
@@ -58,7 +58,7 @@ Este documento identifica y gestiona los **riesgos metodológicos, técnicos y h
 ### RSK-007 — Gates No Verificables de Forma Reproducible
 - **Descripción:** Las auditorías declaran gates "verificados" (ej. techo de 600 líneas, "0 residuos") sin dejar evidencia reproducible; AUD-VS-001 demostró que la evidencia H0 no se reproducía.
 - **Efecto:** Falsa confianza en la certificación; defectos estructurales llegan a producción documental sin detección.
-- **Acción preventiva:** Toda auditoría debe incluir comandos reproducibles (`wc -l`, `grep`, recorridos de enlaces) y sus resultados numéricos exactos; el auditor revisa con comandos propios antes de dictaminar.
+- **Acción preventiva:** Toda auditoría debe incluir comandos reproducibles (`wc -l`, `grep`, recorridos de enlaces) y sus resultados numéricos exactos; el auditor revisa con comandos propios antes de dictaminar. Desde 2026-09-11 la mitigación principal es la suite `07-operacion/verify-gates.sh` (gate obligatorio pre-push, decisión D-007).
 - **Origen:** AUD-VS-001, hallazgo AUD-001 y decisión Q-003.
 
 ### RSK-008 — Pérdida de Historial por Ausencia de Control de Versiones
