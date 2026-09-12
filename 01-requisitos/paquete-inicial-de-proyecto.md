@@ -65,7 +65,14 @@ Al crear un nuevo proyecto (cliente, personal o producto), se copia la siguiente
 
 ## 2. Checklist de Puesta en Marcha (Setup en 10 Minutos)
 
-Para inicializar un proyecto nuevo, Luigi o la IA ejecutan los siguientes 5 pasos:
+Para inicializar un proyecto nuevo, Luigi o la IA ejecutan los siguientes 6 pasos. **Vía rápida recomendada (Paso 0):** un solo comando hace los pasos 1, 2, 5 y 6 automáticamente:
+
+```bash
+bash <core>/07-operacion/init-vibe-project.sh <nombre-proyecto> [prefijo] [destino]
+# Ejemplo: bash init-vibe-project.sh mi-tienda TIED
+```
+
+El script crea el árbol de 16 carpetas (con anclas), siembra tríada y control compactos parametrizados, instala `verify-gates.sh` y el workflow de CI, hace el commit fundacional y valida los gates en verde. Los pasos manuales quedan como alternativa o para personalizar:
 
 - [ ] **Paso 1: Copia de estructura**  
   Copiar el árbol de carpetas y archivos base en el nuevo directorio de trabajo.

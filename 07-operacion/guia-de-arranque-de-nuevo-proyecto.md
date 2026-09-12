@@ -19,6 +19,20 @@ Este runbook operativo permite a Luigi o a un equipo inicializar un **nuevo proy
 
 ## 1. Procedimiento de Inicialización Paso a Paso
 
+### Vía Rápida: Un Solo Comando (recomendada)
+Desde el repositorio core de Vibe System:
+
+```bash
+bash 07-operacion/init-vibe-project.sh <nombre-proyecto> [prefijo] [destino]
+# Ejemplos:
+bash 07-operacion/init-vibe-project.sh mi-tienda TIED
+bash 07-operacion/init-vibe-project.sh control-ventas          # prefijo automático: CONT
+```
+
+Equivalente a los Pasos 1–6 de esta guía: crea el árbol con anclas, siembra tríada y control compactos ya parametrizados, instala `verify-gates.sh` + workflow de CI, hace el commit fundacional y deja los gates en verde (EXIT=0). Continuar con el **Paso 4** solo para ajustar textos de identidad.
+
+### Procedimiento Manual (alternativa)
+
 ### Paso 1: Crear el Directorio del Proyecto
 En la terminal (PowerShell o Bash), define el nombre del nuevo proyecto y crea su carpeta:
 

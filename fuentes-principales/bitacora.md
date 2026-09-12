@@ -72,6 +72,32 @@ Cada nueva sesión se agrega en la parte superior de la sección de entradas cro
 
 ## 3. Entradas cronológicas
 
+## 2026-09-12 — Automatización del arranque: init-vibe-project.sh + CI para derivados
+
+- Estado de sesión: CERRADA
+- Hito/epic: Core
+- Responsable: Luigi / Buffy (agente IA)
+- Objetivo: que iniciar un proyecto real tome un solo comando, heredando gates, CI y memoria desde el minuto cero.
+
+### Hecho
+- Creado `07-operacion/init-vibe-project.sh`: `<nombre> [prefijo] [destino]` → árbol de 16 carpetas con **anclas en las vacías** (lección F-011), siembra compacta de tríada + convenciones + DoR/DoD + estados + glosario + riesgos (todas ≤600 líneas, parametrizadas con `@PROYECTO@ @PREFIJO@ @FECHA@`), instala `verify-gates.sh` parametrizada + workflow de CI, `.gitignore` con secretos bloqueados, commit fundacional y validación final con la suite.
+- Decisión de diseño: los documentos de control del derivado se **siembran nuevos y compactos** (no se copian los del core), porque el DoR del core (706 líneas) y el DoD (674) violan el techo de 600 y arrastrarían contenido del core al derivado.
+- Creada `07-operacion/template-ci-verify-gates.yml`: workflow de CI listo para derivados.
+- Validación end-to-end en sandbox: `demo-tienda` (prefijo TIED) y `control-ventas` (prefijo automático CONT) → INIT EXIT=0, gates 10/10; negativa (enlace `file:///` plantado) → EXIT=1; restauración → EXIT=0.
+- La validación detectó y corrigió 3 bugs del script antes de publicarlo: llamada a `seed` antes de su definición, tokens `@PROYECTO`/`@FECHA` sin cerrar (17) y commit con literal `@PROYECTO@`.
+- Guías actualizadas: `paquete-inicial` (Paso 0 vía rápida) y `guia-de-arranque` (Vía Rápida recomendada, manual como alternativa).
+
+### Decisiones
+- D-009: los proyectos derivados usan documentos de control sembrados compactos, no copias de los del core; el core es fuente de plantillas y gates, no de contenido.
+
+### Evidencia
+- 2 sandboxes con INIT EXIT=0 y gates 10/10; negativa EXIT=1 (2026-09-12).
+
+### Siguiente acción
+- Arrancar el primer proyecto real con el script (piloto).
+
+---
+
 ## 2026-09-11 — Integración de la suite de gates en GitHub Actions
 
 - Estado de sesión: CERRADA

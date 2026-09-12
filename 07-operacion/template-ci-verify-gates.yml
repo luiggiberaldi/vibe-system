@@ -1,0 +1,28 @@
+# Workflow: Verify Gates — [se copia tal cual a proyectos derivados]
+# Ejecuta la suite de verificación determinista en cada push a main y en PRs.
+# EXIT=0 (gates en verde) = sistema íntegro; cualquier FAIL rompe el build.
+# Plantilla heredable del core de Vibe System (.github/workflows/verify-gates.yml).
+
+name: Verify Gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-gates:
+    name: Gates documentales (bash)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ejecutar suite de verificación determinista
+        run: |
+          bash 07-operacion/verify-gates.sh

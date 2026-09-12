@@ -142,6 +142,7 @@ Vibe System es un sistema vivo que evoluciona con cada proyecto completado:
 | **Suite de Verificación (Gates)** | [`07-operacion/verify-gates.sh`](07-operacion/verify-gates.sh) | 12 gates deterministas (EXIT=0 = íntegro); obligatorio pre-push y en CI |
 | **Workflow CI de Gates** | [`.github/workflows/verify-gates.yml`](.github/workflows/verify-gates.yml) | GitHub Actions: ejecuta la suite en cada push a `main` y en PRs |
 | **Plantilla de Gates (Derivados)** | [`07-operacion/template-verify-gates.sh`](07-operacion/template-verify-gates.sh) | Suite heredable parametrizable (10 gates) para proyectos derivados |
+| **Inicializador de Proyectos** | [`07-operacion/init-vibe-project.sh`](07-operacion/init-vibe-project.sh) | Arranque de un proyecto derivado con un solo comando: árbol, tríada, gates, CI y commit |
 | **Registro de Riesgos** | [`09-riesgos/registro-riesgos-vibe-system.md`](09-riesgos/registro-riesgos-vibe-system.md) | Matriz de riesgos metodológicos y mitigaciones |
 | **Auditoría Cierre H0** | [`11-auditorias/auditoria-H0-fundacion-vibe-system.md`](11-auditorias/auditoria-H0-fundacion-vibe-system.md) | Certificación formal de la base documental v1.0.0 |
 | **Auditoría de Coherencia** | [`11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md`](11-auditorias/AUD-VS-001-auditoria-de-coherencia-v1.md) | Auditoría crítica de v1.0.0; base del plan de fixeo |
